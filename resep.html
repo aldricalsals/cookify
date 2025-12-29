@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resep.css">
+    <title>Loopie Land</title>
+</head>
+<body>
+    <nav>
+    <div class="logo">
+    <img src="HUI.png" alt="Logo">
+    </div>
+    <div class="search-container">
+        <input type="text" placeholder="Cari koleksimu..." class="search-bar">
+    </div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#category-section">Kategori</a></li>
+                    <li><a href="galeri.html">Tentan kami</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+
+                </ul>
+             <div class="acc">
+            <a href="akun.html">  <!-- arahkan ke halaman yang kamu mau -->
+                <img src="acc.png" alt="Akun">
+            </a>
+        </div>
+    </nav>
+
+    <!-- OVERLAY SEARCH -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <p class="search-title">
+      pilih beberapa bahan yang ada di kulkasmu...
+    </p>
+
+    <div class="ingredient" data-bahan="tempe">
+    <div class="check">✓</div>
+    <img src="tempe.jpg">
+    <span>Tempe</span>
+</div>
+
+<div class="ingredient" data-bahan="telur">
+    <div class="check">✓</div>
+    <img src="telur.jpg">
+    <span>Telur</span>
+</div>
+
+<div class="ingredient" data-bahan="mie">
+    <div class="check">✓</div>
+    <img src="mie.jpg">
+    <span>Mie</span>
+</div>
+
+<div class="ingredient" data-bahan="daging">
+    <div class="check">✓</div>
+    <img src="daging.jpg">
+    <span>Daging</span>
+</div>
+
+    <button class="btn-search">Cari</button>
+  </div>
+</div>
+
+<script>
+const searchBar = document.querySelector(".search-bar");
+const overlay = document.getElementById("searchOverlay");
+
+// buka overlay
+searchBar.addEventListener("focus", () => {
+    overlay.style.display = "flex";
+});
+
+// tutup overlay saat klik area gelap
+overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+        overlay.style.display = "none";
+        searchBar.blur();
+    }
+});
+</script>
+
+
+
+    <div class="header">
+        <h1>CEK RESEP SIMPEL <br> <span class="cookify">Cookify!</span></h1>
+        <p>Masak enak nggak harus ribet. <br> Pilih bahan di dapurmu, temukan resep lezat. <br> Masak jadi lebih mudah — cepat, praktis, dan anti ribet.</p>
+        <button><a href="lihatkoleksi.html">Lihat Resep!</a></button>
+    </div>
+
+    <section class="category-section">
+    <h1 class="title">Kategori Bahan Masakan</h1>
+    <p class="section">Mau masak apa hari ini?</p>
+
+    <div class="slider-wrapper">
+
+        <!-- Tombol kiri -->
+        <button class="slide-btn left-btn">&#10094;</button>
+
+        <!-- Container scroll -->
+        <div class="category-scroll">
+            <div class="category-container">
+
+                <div class="category-card">
+                    <a href="dagingayam.html">
+                        <div class="circle">
+                            <img src="dayam.jpg" alt="">
+                        </div>
+                    </a>
+                    <p>Daging Ayam</p>
+                </div>
+
+
+                <div class="category-card">
+                    <div class="circle"><img src="daging.jpg" alt=""></div>
+                    <p>Daging</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="telur.jpg" alt=""></div>
+                    <p>Telur</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="mie.jpg" alt=""></div>
+                    <p>Mie</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="sayur.jpg" alt=""></div>
+                    <p>Sayur</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="cemilan.jpg" alt=""></div>
+                    <p>Camilan</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="tempe.jpg" alt=""></div>
+                    <p>Tempe</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="tahu.jpg" alt=""></div>
+                    <p>Tahu</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="roti.jpg" alt=""></div>
+                    <p>Roti</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="kentang.jpg" alt=""></div>
+                    <p>Kentang</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="mie.jpg" alt=""></div>
+                    <p>Mie</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="sayur.jpg" alt=""></div>
+                    <p>Sayur</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="cemilan.jpg" alt=""></div>
+                    <p>Camilan</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Tombol kanan -->
+        <button class="slide-btn right-btn">&#10095;</button>
+
+    </div>
+</section>
+
+    <script>
+    const scrollContainer = document.querySelector(".category-scroll");
+    const btnLeft = document.querySelector(".left-btn");
+    const btnRight = document.querySelector(".right-btn");
+
+    // Scroll kanan
+    btnRight.addEventListener("click", () => {
+        scrollContainer.scrollBy({
+            left: 200,   // geser 200px ke kanan
+            behavior: "smooth"
+        });
+    });
+
+    // Scroll kiri
+    btnLeft.addEventListener("click", () => {
+        scrollContainer.scrollBy({
+            left: -200,  // geser 200px ke kiri
+            behavior: "smooth"
+        });
+    });
+</script>
+
+
+
+    <div class="container">
+        <h2>Resep Terbaik</h2>
+
+        <div class="product-grid">
+
+           <div class="product-card">
+                <img src="ayambrokoli.png" alt="">
+                <div class="product-name">Ayam Fillet Tumis</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <img src="kangkung.png" alt="">
+                <div class="product-name">Tumis Kangkung</div>
+                <div class="product-category">Fresh Veggies</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <img src="omellet.png" alt="">
+                <div class="product-name">Omelette Telur</div>
+                <div class="product-category">Fruits & Vegetables</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <img src="wonton.png" alt="">
+                <div class="product-name">Ayam Fillet Tumis</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <img src="ayamm.png" alt="">
+                <div class="product-name">Bakwan Crispy</div>
+                <div class="product-category">Fruits & Vegetables</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+        </div>
+
+        <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+        <div class="banner-section">
+            <div class="banner banner-orange">
+                
+            </div>
+
+            <div class="banner banner-dark">
+                Best Cuisine From the Sea of America
+            </div>
+        </div>
+    </div>
+
+    <footer style="background-color: rgb(43, 41, 38);">
+        Copyright &copy: LoppieLand - 2025
+    </footer>
+    
+    </body>
+    </html>

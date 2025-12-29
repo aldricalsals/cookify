@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dagingayam.css">
+    <title>Loopie Land</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+        <img src="HUI.png" alt="Logo">
+        </div>
+            <div class="search-container">
+                <input type="text" placeholder="Cari koleksimu..." class="search-bar">
+            </div>
+
+            <div class="acc">
+                <a href="akun.html">  <!-- arahkan ke halaman yang kamu mau -->
+                    <img src="acc.png" alt="Akun"></a>
+            </div>
+    </nav>
+
+    <div class="container">
+
+        <h2>Olahan daging ayam</h2>
+
+        <div class="product-grid">
+            
+           <div class="product-card">
+                <a href="ayamfillettumis.html" class="img-link">
+                    <img src="ayambrokoli.png" alt="">
+                </a>
+                <div class="product-name">Ayam Brokoli</div>
+                <div class="product-category"></div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="ayamfillettumis.html" class="img-link">
+                    <img src="ayamm.png" alt="">
+                </a>
+                <div class="product-name">Ayam Fillet Tumis</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="ayamsuwir.png" class="img-link">
+                    <img src="ayamsuwir.png" alt="">
+                </a>
+                <div class="product-name">Ayam Suwir Bumbu Gurih</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="supayam.png" class="img-link">
+                    <img src="supayam.png" alt="">
+                </a>
+                <div class="product-name">Sup Ayam</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="ayamfillettumis.html" class="img-link">
+                    <img src="ayambrokoli.png" alt="">
+                </a>
+                <div class="product-name">Ayam Fillet Tumis</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="ayamfillettumis.html" class="img-link">
+                    <img src="ayambrokoli.png" alt="">
+                </a>
+                <div class="product-name">Ayam Fillet Tumis</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="ayamfillettumis.html" class="img-link">
+                    <img src="ayambrokoli.png" alt="">
+                </a>
+                <div class="product-name">Ayam Fillet Tumis</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="ayamfillettumis.html" class="img-link">
+                    <img src="ayambrokoli.png" alt="">
+                </a>
+                <div class="product-name">Ayam Fillet Tumis</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="ayamfillettumis.html" class="img-link">
+                    <img src="ayambrokoli.png" alt="">
+                </a>
+                <div class="product-name">Ayam Fillet Tumis</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="ayamfillettumis.html" class="img-link">
+                    <img src="ayambrokoli.png" alt="">
+                </a>
+                <div class="product-name">Ayam Fillet Tumis</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="ayamfillettumis.html" class="img-link">
+                    <img src="ayambrokoli.png" alt="">
+                </a>
+                <div class="product-name">Ayam Fillet Tumis</div>
+                <div class="product-category">Fresh Fruit</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+    </div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+        <script>
+document.querySelectorAll(".favorite-btn").forEach(btn => {
+    btn.addEventListener("click", function(event) {
+        event.stopPropagation(); // cegah klik <a>
+        event.preventDefault();  // cegah pindah halaman
+        btn.classList.toggle("active");
+        btn.innerText = btn.classList.contains("active") ? "❤️" : "♡";
+    });
+});
+</script>
+
+
+
+    <footer style="background-color: rgb(43, 41, 38);">
+        Copyright &copy: LoppieLand - 2025
+    </footer>
+    
+    </body>
+    </html>
