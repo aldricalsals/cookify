@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ayamfillettumis.css">
+    <link rel="stylesheet" href="ayambrokoli.css">
     <title>Loopie Land</title>
 </head>
 <body>
@@ -15,6 +15,25 @@
     <div class="recipe-image">
         <img src="ayambrokoli.png" alt="Ayam Brokoli">
     </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
 
     <div class="recipe-content">
         <h4>Bahan Bahan</h4>
