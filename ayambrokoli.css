@@ -40,6 +40,21 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+.heart-svg {
+    width: 100px;
+    height: 35px;
+    fill: transparent;
+    stroke: #ff5b5b;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.heart-svg.active {
+    fill: #ff5b5b;
+    transform: scale(1.1);
+}
+
 .recipe-content h4 {
     margin-top: 20px;
     margin-bottom: 8px;
