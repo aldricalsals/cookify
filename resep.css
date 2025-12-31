@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#kategori {
+  scroll-margin-top: 90px; /* tinggi navbar */
+}
+
 body{
 font-family: inherit;
 margin: 0;
@@ -104,6 +112,34 @@ nav ul li a:hover{
     font-size: 16px;
     color: #555;
     margin-bottom: 15px;
+}
+
+/* Icon Akun */
+.acc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.acc a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acc img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* efek hover */
+.acc img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 /* LIST BAHAN */
@@ -239,7 +275,6 @@ nav ul li a:hover{
     text-decoration: none;
 }
 
-
 .header button:hover{
     background-color: #687c55;
     transform: scale(1.1);
@@ -269,9 +304,10 @@ nav ul li a:hover{
 .category-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     padding-top: 10px;
-    flex-wrap: wrap;
+    padding-left: 400px;
+    flex-wrap: nowrap;
 }
 
 .category-card {
@@ -340,14 +376,6 @@ nav ul li a:hover{
 
 .category-scroll::-webkit-scrollbar {
     display: none;
-}
-
-/* flex item */
-.category-container {
-    display: flex;
-    padding-left: 400px;
-    gap: 20px;
-    flex-wrap: nowrap;
 }
 
 .circle {
@@ -502,3 +530,126 @@ h2 {
     background: url('ayamm.png') center/cover no-repeat;
 }
 
+footer {
+    width: 100%;
+    background-color: #ffffff;
+    color: #818181;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+/* ===============================
+   EXTRA SMALL DEVICE (HP ASLI)
+   =============================== */
+@media (max-width: 576px) {
+
+    nav {
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .header {
+        padding: 20px;
+        padding-bottom: 180px;
+        text-align: left;
+    }
+
+    .header h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .header p {
+        font-size: 14px;
+        max-width: 100%;
+    }
+
+    .about {
+        padding: 30px 20px;
+    }
+
+    .about-text h2 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 15px;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+
+    .category-scroll {
+        padding: 0 20px 15px;
+        margin: 0;
+    }
+
+    .category-card {
+        width: 160px;
+        padding: 8px;
+    }
+
+    .circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .category-card p {
+        font-size: 14px;
+    }
+
+    .category-card button {
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .product-card img {
+        height: 150px;
+    }
+
+    .product-name {
+        font-size: 14px;
+    }
+
+    .product-category {
+        font-size: 12px;
+    }
+
+    .favorite-btn {
+        font-size: 24px;
+        right: 12px;
+        bottom: 5px;
+    }
+
+    .banner {
+        height: 140px;
+        font-size: 18px;
+        padding: 20px;
+    }
+}
