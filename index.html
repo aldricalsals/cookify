@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resep.css">
-    <title>Loopie Land</title>
+    <title>Cookify</title>
 </head>
 <body>
     <nav>
@@ -16,8 +16,8 @@
     </div>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#category-section">Kategori</a></li>
-                    <li><a href="galeri.html">Tentan kami</a></li>
+                    <li><a href="">Kategori</a></li>
+                    <li><a href="galeri.html">Tentang kami</a></li>
                     <li><a href="#contact">Kontak</a></li>
 
                 </ul>
@@ -29,57 +29,59 @@
     </nav>
 
     <!-- OVERLAY SEARCH -->
-<div class="search-overlay" id="searchOverlay">
-  <div class="search-box">
-    <p class="search-title">
-      pilih beberapa bahan yang ada di kulkasmu...
-    </p>
+    <section class="category-section" id="kategori">
+        <div class="search-overlay" id="searchOverlay">
+        <div class="search-box">
+            <p class="search-title">
+            pilih beberapa bahan yang ada di kulkasmu...
+            </p>
 
-    <div class="ingredient" data-bahan="tempe">
-    <div class="check">✓</div>
-    <img src="tempe.jpg">
-    <span>Tempe</span>
-</div>
+            <div class="ingredient" data-bahan="tempe">
+            <div class="check">✓</div>
+            <img src="tempe.jpg">
+            <span>Tempe</span>
+        </div>
 
-<div class="ingredient" data-bahan="telur">
-    <div class="check">✓</div>
-    <img src="telur.jpg">
-    <span>Telur</span>
-</div>
+        <div class="ingredient" data-bahan="telur">
+            <div class="check">✓</div>
+            <img src="telur.jpg">
+            <span>Telur</span>
+        </div>
 
-<div class="ingredient" data-bahan="mie">
-    <div class="check">✓</div>
-    <img src="mie.jpg">
-    <span>Mie</span>
-</div>
+        <div class="ingredient" data-bahan="mie">
+            <div class="check">✓</div>
+            <img src="mie.jpg">
+            <span>Mie</span>
+        </div>
 
-<div class="ingredient" data-bahan="daging">
-    <div class="check">✓</div>
-    <img src="daging.jpg">
-    <span>Daging</span>
-</div>
+        <div class="ingredient" data-bahan="daging">
+            <div class="check">✓</div>
+            <img src="daging.jpg">
+            <span>Daging</span>
+        </div>
 
-    <button class="btn-search">Cari</button>
-  </div>
-</div>
+            <button class="btn-search">Cari</button>
+        </div>
+    </div>
 
-<script>
-const searchBar = document.querySelector(".search-bar");
-const overlay = document.getElementById("searchOverlay");
+    <script>
+        const searchBar = document.querySelector(".search-bar");
+        const overlay = document.getElementById("searchOverlay");
 
-// buka overlay
-searchBar.addEventListener("focus", () => {
-    overlay.style.display = "flex";
-});
+        // buka overlay
+        searchBar.addEventListener("focus", () => {
+            overlay.style.display = "flex";
+        });
 
-// tutup overlay saat klik area gelap
-overlay.addEventListener("click", (e) => {
-    if (e.target === overlay) {
-        overlay.style.display = "none";
-        searchBar.blur();
-    }
-});
-</script>
+        // tutup overlay saat klik area gelap
+        overlay.addEventListener("click", (e) => {
+            if (e.target === overlay) {
+                overlay.style.display = "none";
+                searchBar.blur();
+            }
+        });
+    </script>
+
 
 
 
@@ -111,24 +113,30 @@ overlay.addEventListener("click", (e) => {
                     <p>Daging Ayam</p>
                 </div>
 
-
                 <div class="category-card">
-                    <div class="circle"><img src="daging.jpg" alt=""></div>
-                    <p>Daging</p>
-                </div>
-
-                <div class="category-card">
-                    <div class="circle"><img src="telur.jpg" alt=""></div>
+                    <a href="telur.html">
+                        <div class="circle">
+                            <img src="telur.jpg" alt="">
+                        </div>
+                    </a>
                     <p>Telur</p>
                 </div>
 
                 <div class="category-card">
-                    <div class="circle"><img src="mie.jpg" alt=""></div>
+                    <a href="mie.html">
+                        <div class="circle">
+                            <img src="mie.jpg" alt="">
+                        </div>
+                    </a>
                     <p>Mie</p>
                 </div>
 
                 <div class="category-card">
-                    <div class="circle"><img src="sayur.jpg" alt=""></div>
+                    <a href="sayur.html">
+                        <div class="circle">
+                            <img src="sayur.jpg" alt="">
+                        </div>
+                    </a>
                     <p>Sayur</p>
                 </div>
 
@@ -160,6 +168,11 @@ overlay.addEventListener("click", (e) => {
                 <div class="category-card">
                     <div class="circle"><img src="mie.jpg" alt=""></div>
                     <p>Mie</p>
+                </div>
+
+                <div class="category-card">
+                    <div class="circle"><img src="daging.jpg" alt=""></div>
+                    <p>Daging</p>
                 </div>
 
                 <div class="category-card">
@@ -274,8 +287,8 @@ overlay.addEventListener("click", (e) => {
         </div>
     </div>
 
-    <footer style="background-color: rgb(43, 41, 38);">
-        Copyright &copy: LoppieLand - 2025
+    <footer>
+        Copyright &copy: Cookify - 2025
     </footer>
     
     </body>
