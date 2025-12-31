@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="supayam.css">
+    <title>Sup Ayam</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Sup Ayam</h1>
+    <h3>gurih kaldu</h3>
+
+    <div class="recipe-image">
+        <img src="supayam.png" alt="Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>35 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>2 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+            <li>300 g fillet ayam</li>
+            <li>2 sdm tepung maizena</li>
+            <li>150 g brokoli</li>
+            <li>4 sdm minyak sayur</li>
+            <li>2 siung bawang putih</li>
+            <li>1/4 bawang bombay</li>
+            <li>1/2 cm jahe</li>
+            <li>1 batang daun bawang</li>
+            <li>100 ml air</li>
+        </ul>
+
+        <h4>Bumbu</h4>
+        <ul>
+            <li>250 gram ayam (dada/paha), potong sedang</li>
+            <li>1 buah wortel, iris bulat</li>
+            <li>1 buah kentang kecil, potong dadu</li>
+            <li>1 batang daun bawang, iris</li>
+            <li>1 batang seledri</li>
+            <li>2 siung bawang putih, geprek</li>
+            <li>1/2 sdt merica bubuk</li>
+            <li>Garam secukupnya</li>
+            <li>600 ml air</li>
+            <li>Minyak secukupnya</li>
+
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ol>
+            <li>Panaskan sedikit minyak, tumis bawang putih hingga harum.</li>
+            <li>Masukkan ayam, aduk hingga berubah warna.</li>
+            <li>Tuang air, masak hingga ayam empuk.</li>
+            <li>Masukkan wortel dan kentang, masak hingga sayuran matang.</li>
+            <li>Bumbui dengan garam dan merica.</li>
+
+        </ol>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    
+    </body>
+    </html>

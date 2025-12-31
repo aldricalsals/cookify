@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="telurcrispy.css">
+    <title>Telur Crispy</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Telur Crispy</h1>
+    <h3>gurih cress yummy</h3>
+
+    <div class="recipe-image">
+        <img src="telurcrispy.png" alt="Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>25 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>2 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+            <li>4 butir telur</li>
+            <li>100 g tepung terigu</li>
+            <li>2 sdm tepung maizena</li>
+            <li>1/2 sdt bawang putih bubuk</li>
+            <li>1/2 sdt merica bubuk</li>
+            <li>Garam secukupnya</li>
+            <li>Air secukupnya</li>
+            <li>Tepung roti (opsional, untuk ekstra crispy)</li>
+            <li>Minyak goreng secukupnya</li>
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ol>
+            <li>Rebus telur hingga matang, kupas, lalu belah dua jika suka.</li>
+            <li>Campur tepung terigu, tepung maizena, bawang putih bubuk, merica, dan garam.</li>
+            <li>Tambahkan air sedikit demi sedikit hingga adonan kental.</li>
+            <li>Celupkan telur ke dalam adonan tepung.</li>
+            <li>Balur dengan tepung roti jika ingin hasil lebih renyah.</li>
+            <li>Panaskan minyak, goreng telur hingga kuning keemasan dan crispy.</li>
+            <li>Angkat dan tiriskan.</li>
+
+        </ol>
+
+         <h4>Tips</h4>
+        <ol>
+            <li>Gunakan minyak yang cukup banyak agar telur matang merata.</li>
+            <li>Bisa disajikan dengan saus sambal, saus keju, atau saus balado.</li>
+            <li>Cocok sebagai lauk atau camilan praktis.</li>
+        </ol>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    </body>
+    </html>

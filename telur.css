@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+font-family: inherit;
+margin: 0;
+height: 100%;
+background-color: #f0f0f0;
+overflow-x: hidden;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 12px 50px 7px 50px;
+}
+
+.acc {
+  display: flex;
+  align-items: center;
+}
+
+.acc a {
+  display: flex;
+  align-items: center;
+}
+
+.acc img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.acc img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+
+.header-item {
+    padding: 1px 9px 1px 9px;
+    text-align: center;
+    position: relative;
+}
+
+.header-item a img {
+    padding-top: 0;
+    width: 25px;
+    height: auto;
+}
+
+
+.search-container{
+    padding: 0 10px;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.search-bar{
+    width:36%;
+    padding: 4px 15px;
+    font-size: 14px;
+    border:none;
+    border-radius: 17px;
+     background-color: #e2e2e2;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    flex: 1;
+    justify-content: center;   /* INI YANG MEMBENTUK TENGAH */
+    gap: 25px;
+    padding: 2px;
+    margin: 0;
+}
+
+nav ul li{
+    display: inline;
+}
+
+nav ul li a{
+    color: #000000;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 1px;
+}
+
+nav ul li a:hover{
+    background-color: transparent;
+    color: #777777;
+}
+
+
+/* container */
+.container {
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+h2 {
+    color: #2c7a3f;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 10px;
+    gap: 70px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-card img {
+    width: 100%;
+    padding: 0;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.product-category {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.heart-svg {
+    width: 26px;
+    height: 26px;
+    fill: transparent;
+    stroke: #ff5b5b;
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.heart-svg.active {
+    fill: #ff5b5b;
+    transform: scale(1.1);
+}
+
+.product-card {
+    position: relative;
+}
+
+.img-link img {
+    cursor: pointer;
+}
+
+.img-link {
+    display: block;
+}
+
+/* Posisi tombol love */
+.favorite-btn {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 5;
+    user-select: none;
+    color: #ccc;
+}
+
+.favorite-btn.active {
+    bottom: 9px; 
+    right: 20px;
+    font-size: 20px;
+}
+
+footer {
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #818181;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 14px;
+}

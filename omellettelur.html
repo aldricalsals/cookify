@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="omellettelur.css">
+    <title>Omellet Mie</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Omellet Telur</h1>
+    <h3>gurih</h3>
+
+    <div class="recipe-image">
+        <img src="omellet.png" alt="Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>25 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>2 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+            <li>1 bungkus mie instan (rebus dan tiriskan)</li>
+            <li>2 butir telur</li>
+            <li>1 batang daun bawang, iris halus</li>
+            <li>1 siung bawang putih, cincang (opsional)</li>
+            <li>1/2 sdt garam</li>
+            <li>1/2 sdt merica bubuk</li>
+            <li>Minyak goreng secukupnya</li>
+
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ol>
+            <li>Rebus mie hingga setengah matang, lalu tiriskan.</li>
+            <li>Campur mie dengan telur, daun bawang, bawang putih, garam, dan merica, lalu aduk rata.</li>
+            <li>Panaskan sedikit minyak di wajan.</li>
+            <li>Tuang adonan mie ke wajan dan ratakan.</li>
+            <li>Masak dengan api kecil hingga bagian bawah matang dan kecokelatan.</li>
+            <li>Balik omelette, lalu masak hingga matang sempurna.</li>
+            <li>Angkat dan sajikan selagi hangat.</li>
+        </ol>
+
+        <h4>Tips Variasi</h4>
+        <ul>
+            <li>Tambahkan keju, sosis, kornet, atau sayuran sesuai selera.</li>
+            <li>Sajikan dengan saus sambal atau mayones.</li>
+            <li>Bisa dibuat mini omelette untuk camilan.</li>
+
+
+        </ul>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    </body>
+    </html>

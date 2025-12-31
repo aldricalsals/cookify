@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="telur.css">
+    <title>Telur</title>
+</head>
+<body>
+    <nav>
+        <div class="header-item">
+            <a href="index.html">
+                <img src="back.png" alt="Home">
+            </a>
+        </div>
+
+        <div class="acc">
+            <a href="akun.html">  <!-- arahkan ke halaman yang kamu mau -->
+            <img src="acc.png" alt="Akun"></a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h2>Olahan Telur</h2>
+
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <a href="omellettelur.html" class="img-link">
+                    <img src="omellet.png" alt="">
+                </a>
+                <div class="product-name">Omellet Telur</div>
+                <div class="product-category">gurih</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+           <div class="product-card">
+                <a href="suptelur.html" class="img-link">
+                    <img src="suptelur.png" alt="">
+                </a>
+                <div class="product-name">Sup Telur</div>
+                <div class="product-category">gurih creamy</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="orektelur.html" class="img-link">
+                    <img src="orektelur.png" alt="">
+                </a>
+                <div class="product-name">Orek Telur</div>
+                <div class="product-category">gurih manis</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="telurbalado.html" class="img-link">
+                    <img src="telurbalado.png" alt="">
+                </a>
+                <div class="product-name">Telur Balado</div>
+                <div class="product-category">pedas gurih</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+            <div class="product-card">
+                <a href="telurcrispy.html" class="img-link">
+                    <img src="telurcrispy.png" alt="">
+                </a>
+                <div class="product-name">Telur Crispy</div>
+                <div class="product-category">gurih cress yummy</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="sambaltelur.html" class="img-link">
+                    <img src="sambaltelur.png" alt="">
+                </a>
+                <div class="product-name">Sambal Telur</div>
+                <div class="product-category">gurih pedas</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="telurgeprek.html" class="img-link">
+                    <img src="telurgeprek.png" alt="">
+                </a>
+                <div class="product-name">Telur Geprek</div>
+                <div class="product-category">pedas gurih cabai</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+    </div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+        <script>
+document.querySelectorAll(".favorite-btn").forEach(btn => {
+    btn.addEventListener("click", function(event) {
+        event.stopPropagation(); // cegah klik <a>
+        event.preventDefault();  // cegah pindah halaman
+        btn.classList.toggle("active");
+        btn.innerText = btn.classList.contains("active") ? "❤️" : "♡";
+    });
+});
+</script>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    </body>
+    </html>
