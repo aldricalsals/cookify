@@ -3,10 +3,12 @@
 }
 
 body{
-font-family: inherit;
-margin: 0;
-background-color: #f0f0f0;
-overflow-x: hidden;
+    margin: 0;
+    font-family: inherit;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
 }
 
 nav{
@@ -17,59 +19,40 @@ nav{
     padding: 12px 50px 7px 50px;
 }
 
-.logo {
-   display: flex;          
-   align-items: center;      
-   gap: 0;               
+.acc {
+  display: flex;
+  align-items: center;
 }
 
-.logo img {
-   width: 130px;              
-   height: auto;            
+.acc a {
+  display: flex;
+  align-items: center;
 }
 
-.search-container{
-    padding: 0 10px;
-    flex-grow: 1;
-    text-align: right;
+.acc img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.search-bar{
-    width:36%;
-    padding: 4px 15px;
-    font-size: 14px;
-    border:none;
-    border-radius: 17px;
-     background-color: #e2e2e2;
+.acc img:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
-    flex: 1;
-    justify-content: center;   /* INI YANG MEMBENTUK TENGAH */
-    gap: 25px;
-    padding: 2px;
-    margin: 0;
+.header-item {
+    padding: 1px 9px 1px 9px;
+    text-align: center;
+    position: relative;
 }
 
-nav ul li{
-    display: inline;
+.header-item a img {
+    padding-top: 0;
+    width: 25px;
+    height: auto;
 }
-
-nav ul li a{
-    color: #000000;
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-    margin: 1px;
-}
-
-nav ul li a:hover{
-    background-color: transparent;
-    color: #777777;
-}
-
 
 /* container */
 .container {
@@ -125,6 +108,7 @@ h2 {
     color: #777;
     margin-bottom: 10px;
 }
+
 .heart-svg {
     width: 26px;
     height: 26px;
@@ -169,3 +153,17 @@ h2 {
     right: 20px;
     font-size: 20px;
 }
+
+footer {
+    width: 100%;
+    background-color: #f0f0f0;
+    color: #818181;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 14px;
+}
+
+
+
+
+    
