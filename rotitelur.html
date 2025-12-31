@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tumistaoge.css">
+    <title>Roti Telur</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Roti Telur</h1>
+    <h3>lembut dan gurih creamy</h3>
+
+    <div class="recipe-image">
+        <img src="rotitelur.png" Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>60 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>6 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+<li>2 lembar roti tawar</li>
+<li>1 butir telur</li>
+<li>1 batang daun bawang, iris halus (opsional)</li>
+<li>Keju parut secukupnya (opsional)</li>
+<li>Garam secukupnya</li>
+<li>Merica secukupnya</li>
+<li>Margarin / mentega secukupnya</li>
+
+
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ul>
+<li>Lubangi bagian tengah roti tawar (atau tekan hingga cekung).</li>
+<li>Panaskan teflon, olesi dengan margarin.</li>
+<li>Letakkan roti di atas teflon.</li>
+<li>Pecahkan telur ke bagian tengah roti.</li>
+<li>Taburi garam, merica, dan daun bawang.</li>
+<li>Tutup teflon, masak dengan api kecil hingga telur matang.</li>
+<li>Tambahkan keju parut jika suka, tutup kembali hingga meleleh.</li>
+<li>Angkat dan sajikan hangat.</li>
+
+        </ul>
+
+
+           <h4>Tips</h4>
+        <ul>
+<li>Bisa dibuat setengah matang (sunny side) atau matang penuh.</li>
+<li>Tambahkan sosis, smoked beef, atau sayuran.</li>
+<li>Sajikan dengan saus sambal atau saus tomat.</li>
+
+        </ul>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    
+    </body>
+    </html>

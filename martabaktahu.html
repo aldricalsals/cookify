@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tumistaoge.css">
+    <title>Martabak Tahu</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Martabak Tahu</h1>
+    <h3>gurih renyah lembut</h3>
+
+    <div class="recipe-image">
+        <img src="martabaktahu.png" Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>40 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>3 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+<li>10 lembar kulit lumpia</li>
+<li>5 buah tahu putih, haluskan</li>
+<li>2 butir telur</li>
+<li>2 batang daun bawang, iris halus</li>
+<li>2 siung bawang putih, cincang</li>
+<li>1/2 sdt merica bubuk</li>
+<li>Garam secukupnya</li>
+<li>Minyak goreng secukupnya</li>
+
+
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ol>
+<li>Campur tahu halus, telur, daun bawang, bawang putih, garam, dan merica. Aduk rata.</li>
+<li>Ambil 1 lembar kulit lumpia, beri 1–2 sdm isian tahu.</li>
+<li>Lipat membentuk martabak (persegi panjang).</li>
+<li>Rekatkan ujung kulit dengan sedikit air atau putih telur.</li>
+<li>Panaskan minyak dengan api sedang.</li>
+<li>Goreng martabak hingga kuning keemasan dan renyah.</li>
+<li>Angkat dan tiriskan.</li>
+
+
+        </ol>
+
+           <h4>Tips</h4>
+        <ul>
+<li>Tambahkan wortel parut, sosis, atau kornet.</li>
+<li>Bisa pakai kulit martabak telur jika ingin versi besar.</li>
+<li>Sajikan dengan cabai rawit atau saus sambal.</li>
+
+
+
+        </ul>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    
+    </body>
+    </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sayur.css">
+    <title>Sayur</title>
+</head>
+<body>
+    <nav>
+        <div class="header-item">
+            <a href="index.html">
+                <img src="back.png" alt="Home">
+            </a>
+        </div>
+
+        <div class="acc">
+            <a href="akun.html">  <!-- arahkan ke halaman yang kamu mau -->
+            <img src="acc.png" alt="Akun"></a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h2>Olahan Sayur</h2>
+
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <a href="tumisbuncis.html" class="img-link">
+                    <img src="tumisbuncis.png" alt="">
+                </a>
+                <div class="product-name">Tumis Buncis</div>
+                <div class="product-category">manis gurih saus tiram</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="supbayam.html" class="img-link">
+                    <img src="supbayam.png" alt="">
+                </a>
+                <div class="product-name">Sup Bayam</div>
+                <div class="product-category">segar manis</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="sawibakso.html" class="img-link">
+                    <img src="sawibakso.png" alt="">
+                </a>
+                <div class="product-name">Sawi Bakso</div>
+                <div class="product-category">gurih lezat</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="tumiskangkung.html" class="img-link">
+                    <img src="tumiskangkung.png" alt="">
+                </a>
+                <div class="product-name">Tumis Kangkung</div>
+                <div class="product-category">sehat segar gurih</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="tumistaoge.html" class="img-link">
+                    <img src="tumistaoge.png" alt="">
+                </a>
+                <div class="product-name">Tumis Taoge</div>
+                <div class="product-category">cress segar gurih</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="tumisbrokoli.html" class="img-link">
+                    <img src="tumisbrokoli.png" alt="">
+                </a>
+                <div class="product-name">Tumis Brokoli</div>
+                <div class="product-category">gurih lezat</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+            <div class="product-card">
+                <a href="tumiskacangpanjang.html" class="img-link">
+                    <img src="tumiskacangpanjang.png" alt="">
+                </a>
+                <div class="product-name">Tumis Kacang Panjang</div>
+                <div class="product-category">lezat gurih</div>
+                <div class="favorite-btn">♡</div>
+            </div>
+
+
+    </div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+        <script>
+document.querySelectorAll(".favorite-btn").forEach(btn => {
+    btn.addEventListener("click", function(event) {
+        event.stopPropagation(); // cegah klik <a>
+        event.preventDefault();  // cegah pindah halaman
+        btn.classList.toggle("active");
+        btn.innerText = btn.classList.contains("active") ? "❤️" : "♡";
+    });
+});
+</script>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    </body>
+    </html>

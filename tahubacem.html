@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tumistaoge.css">
+    <title>Tahu Bacem</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Tahu Bacem</h1>
+    <h3>manis gurih</h3>
+
+    <div class="recipe-image">
+        <img src="tahubacem.png" Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>40 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>3 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+<li>5 buah tahu putih / tahu kuning</li>
+<li>3 siung bawang putih</li>
+<li>3 siung bawang merah</li>
+<li>1 lembar daun salam</li>
+<li>1 cm lengkuas, memarkan</li>
+<li>2 sdm gula merah, sisir</li>
+<li>1 sdm kecap manis</li>
+<li>1/2 sdt ketumbar bubuk</li>
+<li>1/2 sdt garam</li>
+<li>300 ml air</li>
+<li>Minyak goreng secukupnya</li>
+
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ol>
+<li>Haluskan bawang putih dan bawang merah.</li>
+<li>Masukkan tahu ke dalam panci, tambahkan bumbu halus, daun salam, lengkuas, gula merah, kecap manis, ketumbar, garam, dan air.</li>
+<li>Masak dengan api sedang hingga air menyusut dan bumbu meresap ke dalam tahu.</li>
+<li>Diamkan tahu beberapa menit agar bumbu lebih meresap.</li>
+<li>Panaskan minyak, goreng tahu bacem hingga kecokelatan.</li>
+<li>Angkat dan tiriskan.</li>
+
+        </ol>
+
+           <h4>Tips</h4>
+        <ul>
+<li>Gunakan api kecil saat membacem agar bumbu meresap sempurna.</li>
+<li>Bisa disajikan tanpa digoreng jika ingin lebih sehat.</li>
+<li>Nikmat disajikan dengan sambal dan nasi hangat.</li>
+
+
+        </ul>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    
+    </body>
+    </html>

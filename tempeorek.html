@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tumistaoge.css">
+    <title>Tempe Orek</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Tempe Orek</h1>
+    <h3>pedas gurih</h3>
+
+    <div class="recipe-image">
+        <img src="tempeorek.png" Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>50 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>3 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+<li>1 papan tempe, potong korek api atau dadu kecil</li>
+<li>2 siung bawang putih, cincang</li>
+<li>3 siung bawang merah, iris</li>
+<li>2 lembar daun salam</li>
+<li>1 cm lengkuas, memarkan</li>
+<li>3 sdm kecap manis</li>
+<li>1 sdt gula merah, sisir</li>
+<li>1/2 sdt merica bubuk</li>
+<li>Garam secukupnya</li>
+<li>Minyak goreng secukupnya</li>
+
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ol>
+<li>Goreng tempe hingga kering dan kecokelatan, angkat dan tiriskan.</li>
+<li>Panaskan sedikit minyak, tumis bawang putih dan bawang merah hingga harum.</li>
+<li>Masukkan daun salam dan lengkuas, aduk sebentar.</li>
+<li>Masukkan kecap manis, gula merah, merica, dan garam. Aduk rata.</li>
+<li>Masukkan tempe goreng, aduk hingga semua tempe terbalut bumbu.</li>
+<li>Masak hingga bumbu meresap dan agak kering.</li>
+<li>Angkat dan sajikan.</li>
+
+        </ol>
+
+           <h4>Tips</h4>
+        <ul>
+<li>Tambahkan irisan cabai merah atau rawit untuk pedas.</li>
+<li>Bisa ditambah kacang tanah goreng.</li>
+<li>Untuk orek basah, tambahkan sedikit air.</li>
+
+        </ul>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    
+    </body>
+    </html>

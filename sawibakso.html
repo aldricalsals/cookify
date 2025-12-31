@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sawibakso.css">
+    <title>Sawi Bakso</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Sawi Bakso</h1>
+    <h3>gurih lezat</h3>
+
+    <div class="recipe-image">
+        <img src="sawibakso.png" alt="Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>25 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>2 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+<li>1 ikat sawi hijau / sawi caisim, potong-potong</li>
+<li>8–10 butir bakso sapi, iris</li>
+<li>2 siung bawang putih, cincang</li>
+<li>2 siung bawang merah, iris</li>
+<li>1 buah cabai merah (opsional), iris</li>
+<li>2 sdm saus tiram</li>
+<li>1/2 sdt merica bubuk</li>
+<li>Garam secukupnya</li>
+<li>50 ml air</li>
+<li>Minyak goreng secukupnya</li>
+
+
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ol>
+<li>Panaskan minyak, tumis bawang putih dan bawang merah hingga harum.</li>
+<li>Masukkan cabai, aduk sebentar.</li>
+<li>Masukkan bakso, tumis hingga sedikit kecokelatan.</li>
+<li>Masukkan sawi, aduk hingga layu.</li>
+<li>Tambahkan saus tiram, merica, garam, dan air.</li>
+<li>Masak hingga sawi matang dan bumbu meresap.</li>
+<li>Koreksi rasa, angkat dan sajikan selagi hangat.</li>
+
+        </ol>
+
+        <h4>Tips Variasi</h4>
+        <ul>
+<li>Bisa ditambahkan wortel atau jagung muda.</li>
+<li>Untuk rasa pedas, tambahkan cabai rawit.</li>
+<li>Cocok sebagai menu praktis dan ekonomis.</li>
+
+
+
+        </ul>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    </body>
+    </html>

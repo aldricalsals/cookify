@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tumistaoge.css">
+    <title>Tahu Goreng Isi</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Tahu Goreneg Isi</h1>
+    <h3>crispy pedas gurih</h3>
+
+    <div class="recipe-image">
+        <img src="tahugorengisi.png" Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>40 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>3 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+<li>10 buah tahu pong / tahu goreng cokelat</li>
+<li>2 butir telur</li>
+<li>1 batang daun bawang, iris halus</li>
+<li>1 wortel kecil, serut halus</li>
+<li>2 siung bawang putih, cincang</li>
+<li>1/2 sdt merica bubuk</li>
+<li>Garam secukupnya</li>
+<li>Air secukupnya</li>
+<li>Minyak goreng secukupnya</li>
+
+
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ol>
+<li>Belah tahu bagian tengahnya, keluarkan sedikit isinya.</li>
+<li>Campur telur, daun bawang, wortel, bawang putih, garam, dan merica. Aduk rata.</li>
+<li>Masukkan adonan ke dalam tahu hingga penuh.</li>
+<li>Panaskan minyak dengan api sedang.</li>
+<li>Goreng tahu hingga bagian luar kering dan berwarna keemasan.</li>
+<li>Angkat dan tiriskan.</li>
+
+
+        </ol>
+
+           <h4>Tips</h4>
+        <ul>
+<li>Isi bisa ditambah bihun, kol, tauge, atau sosis.</li>
+<li>Agar lebih renyah, celup tahu ke adonan tepung sebelum digoreng.</li>
+<li>Sajikan dengan cabai rawit atau saus sambal.</li>
+
+
+
+        </ul>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    
+    </body>
+    </html>

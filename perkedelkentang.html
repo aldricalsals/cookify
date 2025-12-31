@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tumistaoge.css">
+    <title>Perkedel Kentang</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Perkedel Kentang</h1>
+    <h3>renyah gurih</h3>
+
+    <div class="recipe-image">
+        <img src="perkedelkentang.png" Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>60 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>6 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+<li>500 g kentang, kupas dan potong</li>
+<li>1 butir telur</li>
+<li>2 siung bawang putih, haluskan</li>
+<li>2 siung bawang merah, haluskan</li>
+<li>1 batang daun bawang, iris halus</li>
+<li>1/2 sdt merica bubuk</li>
+<li>Garam secukupnya</li>
+<li>Minyak goreng secukupnya</li>
+        </ul>
+
+           <h4>Cara Memasak</h4>
+        <ul>
+<li>Goreng kentang hingga matang, angkat dan haluskan.</li>
+<li>Campur kentang halus dengan bawang putih, bawang merah, daun bawang, merica, dan garam.</li>
+<li>Ambil sedikit adonan, bentuk bulat pipih.</li>
+<li>Celupkan perkedel ke telur kocok.</li>
+<li>Panaskan minyak dengan api sedang.</li>
+<li>Goreng perkedel hingga kuning keemasan.</li>
+<li>Angkat dan tiriskan.</li>
+        </ul>
+
+                   <h4>Tips</h4>
+        <ul>
+<li>Bisa ditambah daging cincang, kornet, atau keju.</li>
+<li>Gunakan kentang yang digoreng (bukan direbus) agar tidak lembek.</li>
+<li>Goreng dengan minyak panas agar tidak hancur.</li>
+        </ul>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    
+    </body>
+    </html>

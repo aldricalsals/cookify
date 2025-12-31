@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tumistaoge.css">
+    <title>Tempe Goreng</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Tempe Goreng</h1>
+    <h3>cres renyah gurih</h3>
+
+    <div class="recipe-image">
+        <img src="tempegoreng.png" Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>40 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>3 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+<li>1 papan tempe, iris tipis sesuai selera</li>
+<li>2 siung bawang putih</li>
+<li>1/2 sdt ketumbar bubuk</li>
+<li>Garam secukupnya</li>
+<li>Air secukupnya</li>
+<li>Minyak goreng secukupnya</li>
+
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ol>
+<li>Haluskan bawang putih, ketumbar, dan garam.</li>
+<li>Tambahkan sedikit air hingga bumbu cair.</li>
+<li>Masukkan irisan tempe, rendam selama ±10 menit agar bumbu meresap.</li>
+<li>Panaskan minyak dengan api sedang.</li>
+<li>Goreng tempe hingga kuning keemasan.</li>
+<li>Angkat dan tiriskan.</li>
+
+        </ol>
+
+           <h4>Tips</h4>
+        <ul>
+<li>Bisa langsung digoreng tanpa dibumbui jika ingin super simpel.</li>
+<li>Gunakan api sedang agar tempe matang merata.</li>
+<li>Sajikan dengan sambal atau kecap cabai.</li>
+
+        </ul>
+    </div>
+
+</div>
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    
+    </body>
+    </html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="supbayam.css">
+    <title>Sup Bayam</title>
+</head>
+<body>
+    <div class="recipe-container">
+
+    <h1>Sup Bayam</h1>
+    <h3>segar manis</h3>
+
+    <div class="recipe-image">
+        <img src="supbayam.png" alt="Ayam Brokoli">
+    </div>
+
+    <div class="favorite-btn">♡</div>
+
+    <script>
+            document.querySelectorAll(".favorite-btn").forEach(btn => {
+                btn.addEventListener("click", function(e) {
+                    e.stopPropagation();  // supaya tidak klik card
+
+                    this.classList.toggle("active");
+
+                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
+                    if (this.classList.contains("active")) {
+                        this.textContent = "♥️";
+                    } else {
+                        this.textContent = "♡";
+                    }
+                });
+            });
+        </script>
+
+    <div class="recipe-info">
+        <div class="info-item">
+            ⏱️ <span>20 Menit</span>
+        </div>
+        <div class="info-item">
+            🍽️ <span>2 Porsi</span>
+        </div>
+    </div>
+
+    <div class="recipe-content">
+        <h4>Bahan Bahan</h4>
+        <ul>
+<li>1 ikat bayam, petik daunnya</li>
+<li>1 buah jagung manis, pipil</li>
+<li>2 siung bawang putih, geprek</li>
+<li>2 siung bawang merah, iris</li>
+<li>750 ml air</li>
+<li>1/2 sdt merica bubuk</li>
+<li>Garam secukupnya</li>
+<li>Kaldu bubuk secukupnya (opsional)</li>
+
+        </ul>
+
+        <h4>Bumbu</h4>
+        <ul>
+<li>Didihkan air dalam panci.</li>
+<li>Masukkan bawang putih dan bawang merah, masak hingga harum.</li>
+<li>Masukkan jagung, masak hingga empuk.</li>
+<li>Bumbui dengan garam, merica, dan kaldu bubuk.</li>
+<li>Masukkan bayam, masak sebentar hingga layu.</li>
+<li>Koreksi rasa, angkat dan sajikan selagi hangat.</li>
+
+
+        </ul>
+
+        <h4>Cara Memasak</h4>
+        <ol>
+<li>Jangan memasak bayam terlalu lama agar tidak pahit dan nutrisinya terjaga.</li>
+<li>Bisa ditambahkan temu kunci untuk aroma lebih segar.</li>
+<li>Sajikan segera setelah matang.</li>
+
+
+        </ol>
+    </div>
+
+</div>
+
+
+    <footer>
+        Copyright &copy: Cookify - 2025
+    </footer>
+    
+    </body>
+    </html>
