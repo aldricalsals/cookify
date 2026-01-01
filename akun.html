@@ -114,9 +114,7 @@
 
       <a href="#" class="forgot">Forgot Password?</a>
 
-      <button type="button" onclick="window.location.href='index.html'">
-        Login
-      </button>
+      <button type="button" onclick="loginProses()">Login</button>
     </form>
     <p style="margin-top:15px; font-size:14px;">
   Belum punya akun?
@@ -129,6 +127,26 @@
     <div class="line"></div>
   </div>
 
+<script>
+  <script>
+  function loginProses() {
+    const userIn = document.querySelector('input[type="text"]').value;
+    const passIn = document.querySelector('input[type="password"]').value;
+    
+    const storedUser = localStorage.getItem("username");
+    const storedPass = localStorage.getItem("password");
+
+    if (userIn === storedUser && passIn === storedPass) {
+      alert("Login Berhasil! Selamat memasak.");
+      window.location.href = "index.html";
+    } else {
+      alert("Username atau Password salah! Silakan register jika belum punya akun.");
+    }
+  }
+</script>
+  
+</script>
 </body>
 </html>
+
 
