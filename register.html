@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | Cookify</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #f7f6f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-container {
+      width: 380px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2f7a3d;
+      margin: 25px 0;
+      font-weight: 500;
+    }
+
+    .line {
+      height: 2px;
+      background: #2f7a3d;
+      margin: 20px 0;
+    }
+
+    .input-box {
+      display: flex;
+      align-items: center;
+      border: 2px solid #2f7a3d;
+      border-radius: 15px;
+      padding: 12px 15px;
+      margin-bottom: 15px;
+      background: #fff;
+    }
+
+    .input-box input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2f7a3d;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #256633;
+    }
+
+    a {
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #2f7a3d;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="login-container">
+  <div class="line"></div>
+  <h1>Register</h1>
+
+  <div class="input-box">
+    <input type="text" id="username" placeholder="username">
+  </div>
+
+  <div class="input-box">
+    <input type="password" id="password" placeholder="password">
+  </div>
+
+  <div class="input-box">
+    <input type="password" id="confirm" placeholder="confirm password">
+  </div>
+
+  <button onclick="register()">Register</button>
+
+  <a href="akun.html">Sudah punya akun? Login</a>
+
+  <div class="line"></div>
+</div>
+
+<script>
+  function register() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+    const confirm = document.getElementById("confirm").value;
+
+    if (pass !== confirm) {
+      alert("Password tidak sama!");
+      return;
+    }
+
+    // simpan ke localStorage
+    localStorage.setItem("username", user);
+    localStorage.setItem("password", pass);
+
+    alert("Register berhasil!");
+    window.location.href = "akun.html";
+  }
+</script>
+
+</body>
+</html>
