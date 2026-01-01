@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>User Login | Cookify</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #f7f6f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-container {
+      width: 380px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2f7a3d;
+      font-weight: 500;
+      margin: 25px 0;
+    }
+
+    .line {
+      height: 2px;
+      background: #2f7a3d;
+      margin: 20px 0;
+    }
+
+    .input-box {
+      display: flex;
+      align-items: center;
+      border: 2px solid #2f7a3d;
+      border-radius: 15px;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      background: #fff;
+    }
+
+    .input-box input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 16px;
+    }
+
+    .icon {
+      width: 22px;
+      margin-right: 10px;
+      opacity: 0.7;
+    }
+
+    .forgot {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2f7a3d;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #256633;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <div class="line"></div>
+    <h1>User Login</h1>
+
+    <form>
+      <div class="input-box">
+        <img src="user.png" class="icon">
+        <input type="text" placeholder="username" required>
+      </div>
+
+      <div class="input-box">
+        <img src="lock.png" class="icon">
+        <input type="password" placeholder="password" required>
+      </div>
+
+      <a href="#" class="forgot">Forgot Password?</a>
+
+      <button type="button" onclick="window.location.href='index.html'">
+        Login
+      </button>
+    </form>
+
+    <div class="line"></div>
+  </div>
+
+</body>
+</html>
