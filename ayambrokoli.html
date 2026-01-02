@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="overlay" id="popup">
-        <div class="recipe-container">
+        <div class="recipe-container" onclick="event.stopPropagation()">
             <span class="close-btn" id="closePopup">X</span>
 
     <h1>Ayam Brokoli</h1>
@@ -21,20 +21,27 @@
     <div class="favorite-btn">♡</div>
 
     <script>
-            document.querySelectorAll(".favorite-btn").forEach(btn => {
-                btn.addEventListener("click", function(e) {
-                    e.stopPropagation();  // supaya tidak klik card
+        /* FAVORITE */
+        document.querySelector(".favorite-btn").addEventListener("click", function(e){
+            e.stopPropagation();
+            this.classList.toggle("active");
+            this.textContent = this.classList.contains("active") ? "♥️" : "♡";
+        });
 
-                    this.classList.toggle("active");
-
-                    // Ubah ikon ♥ (merah) dan ♡ (kosong)
-                    if (this.classList.contains("active")) {
-                        this.textContent = "♥️";
-                    } else {
-                        this.textContent = "♡";
-                    }
-                });
-            });
+        /* CLOSE POPUP */
+        document.getElementById("closePopup").addEventListener("click", () => {
+                document.getElementById("popup").classList.add("hide");
+        });
+        /* CLOSE VIA OVERLAY */
+        document.getElementById("popup").addEventListener("click", () => {
+            document.getElementById("popup").style.display = "none";
+        });
+        /* CLICK LUAR = CLOSE */
+        document.getElementById("popup").addEventListener("click", (e) => {
+            if(e.target.id === "popup"){
+                e.currentTarget.style.display = "none";
+            }
+        });
         </script>
 
     <div class="recipe-info">
@@ -86,27 +93,5 @@
     <footer>
         Copyright &copy: Cookify - 2025
     </footer>
-    
-    <script>
-    /* FAVORITE */
-    document.querySelector(".favorite-btn").addEventListener("click", function(e){
-    e.stopPropagation();
-    this.classList.toggle("active");
-    this.textContent = this.classList.contains("active") ? "♥️" : "♡";
-    });
-
-    /* CLOSE POPUP */
-    document.getElementById("closePopup").addEventListener("click", () => {
-    document.getElementById("popup").style.display = "none";
-    });
-
-    /* CLICK LUAR = CLOSE */
-    document.getElementById("popup").addEventListener("click", (e) => {
-    if(e.target.id === "popup"){
-        e.currentTarget.style.display = "none";
-    }
-    });
-</script>
-
     </body>
     </html>
