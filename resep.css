@@ -7,7 +7,6 @@
     --second-color: #56723c;
     --third-color: #9dbb61;
     --text-color: #003631;
-    --text2-color: #fffdd0; 
 }
 
 html {
@@ -552,7 +551,7 @@ footer {
     margin: 1.5rem auto 0;
     line-height: 1.8;
     text-align: center;
-    color: var(--text2-color);
+    color: var(--main-color);
 }
 .contact-container{
     display: flex;
