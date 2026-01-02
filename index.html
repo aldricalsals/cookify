@@ -218,16 +218,6 @@
                     </a>
                     <p>Tempe</p>
                 </div>
-
-
-
-
-
-
-
-                
-                
-
             </div>
         </div>
 
@@ -236,30 +226,6 @@
 
     </div>
 </section>
-
-    <script>
-    const scrollContainer = document.querySelector(".category-scroll");
-    const btnLeft = document.querySelector(".left-btn");
-    const btnRight = document.querySelector(".right-btn");
-
-    // Scroll kanan
-    btnRight.addEventListener("click", () => {
-        scrollContainer.scrollBy({
-            left: 200,   // geser 200px ke kanan
-            behavior: "smooth"
-        });
-    });
-
-    // Scroll kiri
-    btnLeft.addEventListener("click", () => {
-        scrollContainer.scrollBy({
-            left: -200,  // geser 200px ke kiri
-            behavior: "smooth"
-        });
-    });
-</script>
-
-
 
     <div class="container">
         <h2>Resep Terbaik</h2>
@@ -312,7 +278,28 @@
             </div>
         </div>
 
+        
         <script>
+            const scrollContainer = document.querySelector(".category-scroll");
+            const btnLeft = document.querySelector(".left-btn");
+            const btnRight = document.querySelector(".right-btn");
+
+            // Scroll kanan
+            btnRight.addEventListener("click", () => {
+                scrollContainer.scrollBy({
+                    left: 200,   // geser 200px ke kanan
+                    behavior: "smooth"
+                });
+            });
+
+            // Scroll kiri
+            btnLeft.addEventListener("click", () => {
+                scrollContainer.scrollBy({
+                    left: -200,  // geser 200px ke kiri
+                    behavior: "smooth"
+                });
+            });
+
             document.querySelectorAll(".favorite-btn").forEach(btn => {
                 btn.addEventListener("click", function(e) {
                     e.stopPropagation();  // supaya tidak klik card
@@ -372,6 +359,7 @@
     
     </body>
     </html>
+
 
 
 
