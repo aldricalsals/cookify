@@ -4,9 +4,10 @@
 
 :root{
     --main-color: #355e3B;
-    --second-color: #fffdd0;
+    --second-color: #56723c;
     --third-color: #9dbb61;
     --text-color: #003631;
+    --text2-color: #fffdd0; 
 }
 
 html {
