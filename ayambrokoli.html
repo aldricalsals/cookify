@@ -7,7 +7,9 @@
     <title>Ayam Brokoli</title>
 </head>
 <body>
-    <div class="recipe-container">
+    <div class="overlay" id="popup">
+        <div class="recipe-container">
+            <span class="close-btn" id="closePopup"></span>
 
     <h1>Ayam Brokoli</h1>
     <h3>Saus tiram BBQ</h3>
@@ -74,14 +76,37 @@
             <li>Tumis bawang putih, jahe, dan bombay hingga harum.</li>
             <li>Masukkan ayam, aduk hingga matang.</li>
             <li>Tambahkan brokoli dan bumbu, masak hingga meresap.</li>
-        </ol>
+            <li>Sebelum disajikan, bisa tes rasa terlebih dahulu</li>
+            <li>Ayam Brokoli siap disajikan</li>
+            </ol>
+        </div>
+        </div>
     </div>
-
-</div>
 
     <footer>
         Copyright &copy: Cookify - 2025
     </footer>
     
+    <script>
+    /* FAVORITE */
+    document.querySelector(".favorite-btn").addEventListener("click", function(e){
+    e.stopPropagation();
+    this.classList.toggle("active");
+    this.textContent = this.classList.contains("active") ? "♥️" : "♡";
+    });
+
+    /* CLOSE POPUP */
+    document.getElementById("closePopup").addEventListener("click", () => {
+    document.getElementById("popup").style.display = "none";
+    });
+
+    /* CLICK LUAR = CLOSE */
+    document.getElementById("popup").addEventListener("click", (e) => {
+    if(e.target.id === "popup"){
+        e.currentTarget.style.display = "none";
+    }
+    });
+</script>
+
     </body>
     </html>
