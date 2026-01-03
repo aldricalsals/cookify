@@ -575,7 +575,7 @@ h2 {
 .popup-favorite {
     position: absolute;
     top: 12px;
-    right: 44px; /* geser ke kiri agar tidak berhimpit dengan X */
+    right: 44px; 
     font-size: 22px;
     cursor: pointer;
     user-select: none;
@@ -675,15 +675,32 @@ footer {
 }
 /*== Contact Us ==*/
 .contact{
-    background: rgba(255, 255, 255, 0.65); /* transparan */
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 20px;
-    padding: 3rem 2rem;
+    position: relative;
+    padding: 4rem 2rem;
     max-width: 1200px;
     margin: 4rem auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    overflow: hidden;
 }
+.contact::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(
+            rgba(255,255,255,0.75),
+            rgba(255,255,255,0.75)
+        ),
+        url("beranda.jpg"); 
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+.contact *{
+    position: relative;
+    z-index: 1;
+}
+
 .contact .heading p{
     max-width: 800px;
     margin: 1.5rem auto 0;
