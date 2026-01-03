@@ -693,96 +693,124 @@
 
     
      <!-- LOGIN POPUP -->
-    <div class="login-overlay hide" id="popupAuth">
+    <!-- AUTH POPUP -->
+        <div class="auth-overlay hide" id="authPopup">
         <div class="auth-box">
-            <span class="close-login" id="closeAuth">✕</span>
-            <!-- LOGIN -->
-            <div id="loginBox">
-                <h1>Login</h1>
-                <div class="input-box">
-                    <img src="user.png" alt="icon">
-                    <input type="password" id="loginPass" placeholder="password">
-                </div>
-                <button onclick="loginProses()">Login</button>
-                <p class="register-text">
-                    Belum punya akun?
-                    <a href="#" id="showRegister">Register</a>
-                </p>
+        <span class="close-auth" id="closeAuth">✕</span>
+
+        <!-- LOGIN -->
+        <div class="auth-form active" id="loginForm">
+            <h1>Login</h1>
+            <div class="input-box">
+                <img src="user.png" class="icon">
+                <input type="text" id="loginUser" placeholder="Username">
             </div>
-            <!-- REGISTER -->
-            <div class="login-overlay hide" id="loginPopup">
-    <div class="login-container">
-        <span class="close-login" id="closeLogin">✕</span>
-
-        <div class="line"></div>
-        <h1>User Login</h1>
-
-        <div class="input-box">
-        <img src="user.png" class="icon">
-        <input type="text" id="loginUser" placeholder="username">
+            <div class="input-box">
+                <img src="lock.png" class="icon">
+                <input type="password" id="loginPass" placeholder="Password">
+            </div>
+            <button onclick="loginProses()">Login</button>
+                <p class="switch-text">
+                    Belum punya akun?
+                    <a href="#" id="toRegister">Register</a>
+                </p>
         </div>
-
-        <div class="input-box">
-        <img src="lock.png" class="icon">
-        <input type="password" id="loginPass" placeholder="password">
+        <!-- REGISTER -->
+        <div class="auth-form" id="registerForm">
+            <h1>Register</h1>
+            <div class="input-box">
+                <img src="user.png" class="icon">
+                <input type="text" id="regUser" placeholder="Username">
+            </div>
+            <div class="input-box">
+                <img src="lock.png" class="icon">
+                <input type="password" id="regPass" placeholder="Password">
+            </div>
+            <button onclick="registerProses()">Register</button>
+            <p class="switch-text">
+                Sudah punya akun?
+                <a href="#" id="toLogin">Login</a>
+                </p>
         </div>
+  </div>
+</div>
 
-        <a href="#" class="forgot">Forgot Password?</a>
-
-        <button onclick="loginProses()">Login</button>
-
-        <p style="margin-top:15px; font-size:14px;">
-        Belum punya akun?
-        <a href="register.html" style="color:#2f7a3d; font-weight:500;">
-            Register
-        </a>
-        </p>
-
-        <div class="line"></div>
-    </div>
-    </div>
 
     <script>
-        const loginPopup = document.getElementById("loginPopup");
-        const openLogin = document.getElementById("openLogin");
-        const closeLogin = document.getElementById("closeLogin");
+    const authPopup = document.getElementById("authPopup");
+    const openLogin = document.getElementById("openLogin");
+    const closeAuth = document.getElementById("closeAuth");
 
-        /* buka popup */
-        openLogin.addEventListener("click", e => {
+    const loginForm = document.getElementById("loginForm");
+    const registerForm = document.getElementById("registerForm");
+
+    const toRegister = document.getElementById("toRegister");
+    const toLogin = document.getElementById("toLogin");
+
+    /* buka popup */
+    openLogin.addEventListener("click", e => {
         e.preventDefault();
-        loginPopup.classList.remove("hide");
-        });
+        authPopup.classList.remove("hide");
+    });
 
-        /* tutup popup */
-        closeLogin.addEventListener("click", () => {
-        loginPopup.classList.add("hide");
-        });
+    /* tutup popup */
+        closeAuth.addEventListener("click", () => {
+        authPopup.classList.add("hide");
+    });
 
-        /* klik area gelap = tutup */
-        loginPopup.addEventListener("click", e => {
-        if (e.target === loginPopup) {
-            loginPopup.classList.add("hide");
+    /* klik luar */
+    authPopup.addEventListener("click", e => {
+        if (e.target === authPopup) {
+            authPopup.classList.add("hide");
         }
-        });
+    });
+
+    /* switch ke register */
+    toRegister.addEventListener("click", e => {
+    e.preventDefault();
+    loginForm.classList.remove("active");
+    loginForm.classList.add("exit-left");
+
+    registerForm.classList.add("active");
+    });
+
+    /* switch ke login */
+    toLogin.addEventListener("click", e => {
+    e.preventDefault();
+    registerForm.classList.remove("active");
+
+    loginForm.classList.remove("exit-left");
+    loginForm.classList.add("active");
+    });
+
+    /* LOGIN */
+    function loginProses() {
+    const user = loginUser.value;
+    const pass = loginPass.value;
+
+    if (
+        user === localStorage.getItem("username") &&
+        pass === localStorage.getItem("password")
+    ) {
+        alert("Login berhasil!");
+        authPopup.classList.add("hide");
+    } else {
+        alert("Username atau password salah!");
+    }
+    }
+
+    /* REGISTER */
+    function registerProses() {
+    localStorage.setItem("username", regUser.value);
+    localStorage.setItem("password", regPass.value);
+
+    alert("Register berhasil! Silakan login.");
+
+    registerForm.classList.remove("active");
+    loginForm.classList.add("active");
+    }
     </script>
 
-    <script>
-        function loginProses() {
-        const userIn = document.getElementById("loginUser").value;
-        const passIn = document.getElementById("loginPass").value;
-
-        const storedUser = localStorage.getItem("username");
-        const storedPass = localStorage.getItem("password");
-
-        if (userIn === storedUser && passIn === storedPass) {
-            alert("Login berhasil!");
-            loginPopup.classList.add("hide");
-        } else {
-            alert("Username atau password salah!");
-        }
-        }
-        </script>
-    </script>
 
 
                 
