@@ -15,6 +15,7 @@
     <div class="search-container">
         <input type="text" placeholder="Cari koleksimu..." class="search-bar">
     </div>
+
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#kategori">Kategori</a></li>
@@ -22,94 +23,13 @@
                     <li><a href="#contact">Kontak</a></li>
                     <li><a href="favorite.html" class="fav">❤️</a></li>
                 </ul>
-             <div class="acc">
-            <a href="akun.html">  <!-- arahkan ke halaman yang kamu mau -->
-                <img src="acc.png" alt="Akun">
-            </a>
-        </div>
         
-    </nav>
-
-    <!-- OVERLAY SEARCH -->
-    <section class="category-section">
-        <div class="search-overlay" id="searchOverlay">
-        <div class="search-box">
-            <p class="search-title">
-            pilih beberapa bahan yang ada di kulkasmu...
-            </p>
-
-        <div class="ingredient" data-bahan="tempe">
-            <div class="check">✓</div>
-            <img src="tempe.jpg">
-            <span>Tempe</span>
-        </div>
-
-        <div class="ingredient" data-bahan="telur">
-            <div class="check">✓</div>
-            <img src="telur.jpg">
-            <span>Telur</span>
-        </div>
-
-        <div class="ingredient" data-bahan="mie">
-            <div class="check">✓</div>
-            <img src="mie.jpg">
-            <span>Mie</span>
-        </div>
-
-        <div class="ingredient" data-bahan="daging">
-            <div class="check">✓</div>
-            <img src="daging.jpg">
-            <span>Daging</span>
-        </div>
-
-        <div class="ingredient" data-bahan="tempe">
-            <div class="check">✓</div>
-            <img src="tempe.jpg">
-            <span>Tempe</span>
-        </div>
-
-        <div class="ingredient" data-bahan="telur">
-            <div class="check">✓</div>
-            <img src="telur.jpg">
-            <span>Telur</span>
-        </div>
-
-        <div class="ingredient" data-bahan="mie">
-            <div class="check">✓</div>
-            <img src="mie.jpg">
-            <span>Mie</span>
-        </div>
-
-        <div class="ingredient" data-bahan="daging">
-            <div class="check">✓</div>
-            <img src="daging.jpg">
-            <span>Daging</span>
-        </div>
-
-            <button class="btn-search">Cari</button>
-        </div>
-    </div>
-    
-    <script>
-        const searchBar = document.querySelector(".search-bar");
-        const overlay = document.getElementById("searchOverlay");
-
-        // buka overlay
-        searchBar.addEventListener("focus", () => {
-            overlay.style.display = "flex";
-        });
-
-        // tutup overlay saat klik area gelap
-        overlay.addEventListener("click", (e) => {
-            if (e.target === overlay) {
-                overlay.style.display = "none";
-                searchBar.blur();
-            }
-        });
-    </script>
-
-
-
+             <div class="acc">
+                <a href="akun.html">  <!-- arahkan ke halaman yang kamu mau -->
+                    <img src="acc.png" alt="Akun">
+                </a>
+            </div>
+        </nav>
 
     <div class="header">
         <h1>CEK RESEP SIMPEL <br> <span class="cookify">Cookify!</span></h1>
@@ -121,147 +41,147 @@
     <h1 class="title">Kategori Bahan Masakan</h1>
     <p class="section">Mau masak apa hari ini?</p>
 
-    <div class="slider-wrapper">
-
-        <!-- Tombol kiri -->
-        <button class="slide-btn left-btn">&#10094;</button>
-
-        <!-- Container scroll -->
-        <div class="category-scroll">
-            <div class="category-container">
-
-
-                <div class="category-card">
-                    <a href="dagingayam.html">
-                        <div class="circle">
-                            <img src="dayam.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Daging Ayam</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="daging.html">
-                        <div class="circle">
-                            <img src="daging.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Daging</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="ikan.html">
-                        <div class="circle">
-                            <img src="ikan.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Ikan</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="telur.html">
-                        <div class="circle">
-                            <img src="telur.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Telur</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="udang.html">
-                        <div class="circle">
-                            <img src="udang.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Udang</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="mie.html">
-                        <div class="circle">
-                            <img src="mie.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Mie</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="sayur.html">
-                        <div class="circle">
-                            <img src="sayur.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Sayur</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="tempe.html">
-                        <div class="circle">
-                            <img src="tempe.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Tempe</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="tahu.html">
-                        <div class="circle">
-                            <img src="tahu.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Tahu</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="jagung.html">
-                        <div class="circle">
-                            <img src="jagung.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Jagung</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="kentang.html">
-                        <div class="circle">
-                            <img src="kentang.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Kentang</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="roti.html">
-                        <div class="circle">
-                            <img src="roti.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Roti</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="sosis.html">
-                        <div class="circle">
-                            <img src="sosis.jpg" alt="">
-                        </div>
-                    </a>
-                    <p>Sosis</p>
-                </div>
-
-                <div class="category-card">
-                    <a href="bakso.html">
-                        <div class="circle">
-                            <img src="bakso.png" alt="">
-                        </div>
-                    </a>
-                    <p>Bakso</p>
-                </div>
-
-        <!-- Tombol kanan -->
-        <button class="slide-btn right-btn">&#10095;</button>
-
-    </div>
-</section>
+        <div class="slider-wrapper">
+    
+            <!-- Tombol kiri -->
+            <button class="slide-btn left-btn">&#10094;</button>
+    
+            <!-- Container scroll -->
+            <div class="category-scroll">
+                <div class="category-container">
+    
+    
+                    <div class="category-card">
+                        <a href="dagingayam.html">
+                            <div class="circle">
+                                <img src="dayam.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Daging Ayam</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="daging.html">
+                            <div class="circle">
+                                <img src="daging.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Daging</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="ikan.html">
+                            <div class="circle">
+                                <img src="ikan.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Ikan</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="telur.html">
+                            <div class="circle">
+                                <img src="telur.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Telur</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="udang.html">
+                            <div class="circle">
+                                <img src="udang.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Udang</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="mie.html">
+                            <div class="circle">
+                                <img src="mie.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Mie</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="sayur.html">
+                            <div class="circle">
+                                <img src="sayur.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Sayur</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="tempe.html">
+                            <div class="circle">
+                                <img src="tempe.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Tempe</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="tahu.html">
+                            <div class="circle">
+                                <img src="tahu.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Tahu</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="jagung.html">
+                            <div class="circle">
+                                <img src="jagung.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Jagung</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="kentang.html">
+                            <div class="circle">
+                                <img src="kentang.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Kentang</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="roti.html">
+                            <div class="circle">
+                                <img src="roti.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Roti</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="sosis.html">
+                            <div class="circle">
+                                <img src="sosis.jpg" alt="">
+                            </div>
+                        </a>
+                        <p>Sosis</p>
+                    </div>
+    
+                    <div class="category-card">
+                        <a href="bakso.html">
+                            <div class="circle">
+                                <img src="bakso.png" alt="">
+                            </div>
+                        </a>
+                        <p>Bakso</p>
+                    </div>
+    
+            <!-- Tombol kanan -->
+            <button class="slide-btn right-btn">&#10095;</button>
+    
+        </div>
+    </section>
 
      <div class="container">
 
@@ -630,4 +550,5 @@
     
     </body>
     </html>
+
 
