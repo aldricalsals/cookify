@@ -341,7 +341,7 @@
 
         </div>
 
-     <!-- POPUP -->
+                  <!-- POPUP -->
             <div class="overlay hide" id="popup">
                 <div class="popup-card">
                     <span class="close-btn" id="closePopup">✕</span>
@@ -354,7 +354,7 @@
 
                     <div class="recipe-info">
                         <div class="info-item">⏱️ <span>45 Menit</span></div>
-                        <div class="info-item">🍽️ <span>1 Porsi</span></div>
+                        <div class="info-item">🍽️ <span>4 Porsi</span></div>
                     </div>
 
                     <h3>Bahan</h3>
@@ -364,9 +364,8 @@
                     <ol id="popupLangkah"></ol>
                 </div>
             </div>
-        </div>
 
-    <script>
+<script>
         const popup = document.getElementById("popup");
         const popupFavorite = document.getElementById("popupFavorite");
         const closePopup = document.getElementById("closePopup");
@@ -438,36 +437,35 @@
             localStorage.setItem("favorites", JSON.stringify(favorites));
         };
 
-                    // klik love langsung di card (LIST RESEP)
-        document.querySelectorAll(".favorite-btn").forEach(btn => {
-            btn.addEventListener("click", e => {
-                e.stopPropagation();
+        // klik love langsung di card (LIST RESEP)
+document.querySelectorAll(".favorite-btn").forEach(btn => {
+    btn.addEventListener("click", e => {
+        e.stopPropagation();
 
-                const card = btn.closest(".product-card");
-                const id = card.dataset.id;
-                const index = favorites.findIndex(item => item.id === id);
+        const card = btn.closest(".product-card");
+        const id = card.dataset.id;
+        const index = favorites.findIndex(item => item.id === id);
 
-                if (index === -1) {
-                    favorites.push({
-                        id,
-                        title: card.dataset.title,
-                        desc: card.dataset.desc,
-                        img: card.dataset.img
-                    });
-                    btn.textContent = "❤️";
-                    btn.classList.add("active");
-                } else {
-                    favorites.splice(index, 1);
-                    btn.textContent = "♡";
-                    btn.classList.remove("active");
-                }
-
-                localStorage.setItem("favorites", JSON.stringify(favorites));
+        if (index === -1) {
+            favorites.push({
+                id,
+                title: card.dataset.title,
+                desc: card.dataset.desc,
+                img: card.dataset.img
             });
-        });
+            btn.textContent = "❤️";
+            btn.classList.add("active");
+        } else {
+            favorites.splice(index, 1);
+            btn.textContent = "♡";
+            btn.classList.remove("active");
+        }
+
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+    });
+});
 
     </script>
-
 
     <footer>
         Copyright &copy: Cookify - 2025
