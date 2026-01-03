@@ -311,9 +311,9 @@ nav ul li a:hover{
 .category-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 17px;
     padding-top: 10px;
-    padding-left: 400px;
+    padding-left: 500px;
     flex-wrap: nowrap;
 }
 
@@ -752,3 +752,4 @@ form .btn:hover{
         padding: 20px;
     }
 }
+
