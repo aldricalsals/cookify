@@ -698,11 +698,15 @@ footer {
 /*== Contact Us ==*/
 .contact{
     position: relative;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     max-width: 1200px;
     margin: 4rem auto;
     border-radius: 20px;
     overflow: hidden;
+    padding-top: 2.5rem;
+}
+.contact .heading{
+    margin-bottom: 2.5rem;
 }
 .contact-container,
 .contact .heading{
@@ -714,6 +718,7 @@ footer {
     text-align: center;
     font-size: 2.2rem;
     color: var(--second-color);
+    margin-top: 0;
 }
 .contact::before{
     content: "";
@@ -772,16 +777,32 @@ footer {
     flex-direction: column;
     gap: 0.7rem;
 }
+.address div{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
 .address i{
     display: flex;
     align-items: center;
     margin-bottom: 0.8rem;
     font-size: 22px;
     color: var(--text-color);
+    font-size: 20px;
+    min-width: 22px;
 }
 .address span{
     font-size: 1rem;
     margin-left: 1rem;
+    margin: 0;
+    line-height: 1.6;
+}
+.address div span{
+    display: block;
+}
+.address div:hover i{
+    transform: scale(1.1);
+    transition: 0.2s ease;
 }
 .social{
     margin-top: 1rem;
