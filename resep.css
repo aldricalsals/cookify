@@ -775,7 +775,7 @@ footer {
 .address{
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 1rem;
 }
 .address div{
     display: flex;
@@ -785,15 +785,13 @@ footer {
 .address i{
     display: flex;
     align-items: center;
-    margin-bottom: 0.8rem;
-    font-size: 22px;
+    font-size: 20px;
     color: var(--text-color);
     font-size: 20px;
-    min-width: 22px;
+    min-width: 24px;
 }
 .address span{
     font-size: 1rem;
-    margin-left: 1rem;
     margin: 0;
     line-height: 1.6;
 }
