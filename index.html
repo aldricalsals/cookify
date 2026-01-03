@@ -87,9 +87,6 @@
     <div class="logo">
     <img src="HUI.png" alt="Logo">
     </div>
-    <div class="search-container">
-        <input type="text" placeholder="Cari koleksimu..." class="search-bar">
-    </div>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="">Kategori</a></li>
@@ -104,151 +101,6 @@
             </a>
         </div>
     </nav>
-
-        <!-- SEARCH OVERLAY -->
-    <div class="search-overlay" id="searchOverlay">
-        <div class="search-box">
-            <p class="search-title">
-                pilih berdasarkan bahan yang ada dikulkasmu...
-            </p>
-
-            <div class="ingredient-list">
-                <div class="ingredient" data-bahan="tempe">
-                    <div class="check">✓</div>
-                    <img src="tempe.jpg">
-                    <span>tempe</span>
-                </div>
-
-                <div class="ingredient" data-bahan="daging">
-                    <div class="check">✓</div>
-                    <img src="daging.jpg">
-                    <span>daging</span>
-                </div>
-
-                <div class="ingredient" data-bahan="daging-ayam">
-                    <div class="check">✓</div>
-                    <img src="dayam.jpg">
-                    <span>daging ayam</span>
-                </div>
-
-                <div class="ingredient" data-bahan="telur">
-                    <div class="check">✓</div>
-                    <img src="telur.jpg">
-                    <span>telur</span>
-                </div>
-
-                <div class="ingredient" data-bahan="jagung">
-                    <div class="check">✓</div>
-                    <img src="jagung.jpg">
-                    <span>jagung</span>
-                </div>
-
-                <div class="ingredient" data-bahan="sosis">
-                    <div class="check">✓</div>
-                    <img src="sosis.jpg">
-                    <span>sosis</span>
-                </div>
-
-                <div class="ingredient" data-bahan="bakso">
-                    <div class="check">✓</div>
-                    <img src="bakso.png">
-                    <span>bakso</span>
-                </div>
-
-                <div class="ingredient" data-bahan="mie">
-                    <div class="check">✓</div>
-                    <img src="mie.jpg">
-                    <span>mie</span>
-                </div>
-
-                <div class="ingredient" data-bahan="udang">
-                    <div class="check">✓</div>
-                    <img src="udang.jpg">
-                    <span>udang</span>
-                </div>
-
-                <div class="ingredient" data-bahan="tahu">
-                    <div class="check">✓</div>
-                    <img src="tahu.jpg">
-                    <span>tahu</span>
-                </div>
-
-            </div>
-
-            <button class="btn-search">cari</button>
-        </div>
-    </div>
-
-    <script>
-        const searchBar = document.querySelector(".search-bar");
-        const overlay = document.getElementById("searchOverlay");
-
-        /* buka overlay */
-        searchBar.addEventListener("focus", () => {
-            overlay.classList.add("show");
-        });
-
-        /* klik luar = tutup */
-        overlay.addEventListener("click", e => {
-            if (e.target === overlay) {
-                overlay.classList.remove("show");
-                searchBar.blur();
-            }
-        });
-
-        const ingredients = document.querySelectorAll(".ingredient");
-        const btnCari = document.querySelector(".btn-search");
-        const cards = document.querySelectorAll(".product-card");
-
-        let selectedBahan = [];
-
-        /* klik bahan */
-        ingredients.forEach(item => {
-            item.addEventListener("click", () => {
-                const bahan = item.dataset.bahan;
-
-                item.classList.toggle("active");
-
-                if (selectedBahan.includes(bahan)) {
-                    selectedBahan = selectedBahan.filter(b => b !== bahan);
-                } else {
-                    selectedBahan.push(bahan);
-                }
-            });
-        });
-
-        /* tombol cari */
-        btnCari.addEventListener("click", () => {
-            cards.forEach(card => {
-                const bahanResep = card.dataset.bahan.toLowerCase();
-
-                const cocok = selectedBahan.every(b =>
-                    bahanResep.includes(b)
-                );
-
-                card.style.display = cocok ? "block" : "none";
-            });
-
-            // tutup overlay
-            document.getElementById("searchOverlay").classList.remove("show");
-        });
-
-        btnCari.addEventListener("click", () => {
-            localStorage.setItem(
-                "filterBahan",
-                JSON.stringify(selectedBahan)
-            );
-
-            window.location.href = "filter.html";
-        });
-
-        </script>
-
-
-
-
-
-
 
     <div class="header">
         <h1>CEK RESEP SIMPEL <br> <span class="cookify">Cookify!</span></h1>
@@ -929,6 +781,7 @@
     
     </body>
     </html>
+
 
 
 
