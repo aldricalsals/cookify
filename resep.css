@@ -609,7 +609,7 @@ footer {
     flex-direction: column;
     gap: 0.7rem;
 }
-.address i{
+.addres i{
     display: flex;
     align-items: center;
     margin-bottom: 0.8rem;
