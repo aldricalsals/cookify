@@ -870,15 +870,15 @@ form textarea::placeholder{
 /*== Scroll Animation==*/
 .reveal{
     opacity: 0;
-    transform: translateY(30px);
-    transition: all0.7s ease;
+    transform: translateY(0);
+    transition: all 0.7s ease;
 }
 .reveal.active{
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(30px);
 }
 .reveal-left{
-    transform: translateY(-40px);
+    transform: translateX(-40px);
 }
 .reveal-right{
     transform: translateY(40px);
