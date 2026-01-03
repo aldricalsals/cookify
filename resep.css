@@ -685,6 +685,10 @@ footer {
 .contact::before{
     content: "";
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     inset: 0;
     background: 
         linear-gradient(
@@ -696,7 +700,8 @@ footer {
     background-position: center;
     z-index: 0;
 }
-.contact *{
+.contact-container,
+.contact .heading{
     position: relative;
     z-index: 1;
 }
