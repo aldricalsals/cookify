@@ -6,6 +6,80 @@
     <link rel="stylesheet" href="resep.css">
     <title>Cookify</title>
 </head>
+    <style>
+    .login-container {
+      width: 380px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2f7a3d;
+      font-weight: 500;
+      margin: 25px 0;
+    }
+
+    .line {
+      height: 2px;
+      background: #2f7a3d;
+      margin: 20px 0;
+    }
+
+    .input-box {
+      display: flex;
+      align-items: center;
+      border: 2px solid #2f7a3d;
+      border-radius: 10px;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      background: #fff;
+    }
+
+    .input-box input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 16px;
+    }
+
+    .icon {
+      width: 22px;
+      margin-right: 10px;
+      opacity: 0.7;
+    }
+
+    .forgot {
+      display: block;
+      text-align: right;
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #2f7a3d;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #256633;
+    }
+    .register-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+  </style>
 <body>
 
     <nav>
@@ -541,6 +615,87 @@
                 </div>
         </div>
      </section>
+
+
+
+    
+            <!-- LOGIN POPUP -->
+    <div class="login-overlay hide" id="loginPopup">
+    <div class="login-container">
+        <span class="close-login" id="closeLogin">✕</span>
+
+        <div class="line"></div>
+        <h1>User Login</h1>
+
+        <div class="input-box">
+        <img src="user.png" class="icon">
+        <input type="text" id="loginUser" placeholder="username">
+        </div>
+
+        <div class="input-box">
+        <img src="lock.png" class="icon">
+        <input type="password" id="loginPass" placeholder="password">
+        </div>
+
+        <a href="#" class="forgot">Forgot Password?</a>
+
+        <button onclick="loginProses()">Login</button>
+
+        <p style="margin-top:15px; font-size:14px;">
+        Belum punya akun?
+        <a href="register.html" style="color:#2f7a3d; font-weight:500;">
+            Register
+        </a>
+        </p>
+
+        <div class="line"></div>
+    </div>
+    </div>
+
+    <script>
+        const loginPopup = document.getElementById("loginPopup");
+        const openLogin = document.getElementById("openLogin");
+        const closeLogin = document.getElementById("closeLogin");
+
+        /* buka popup */
+        openLogin.addEventListener("click", e => {
+        e.preventDefault();
+        loginPopup.classList.remove("hide");
+        });
+
+        /* tutup popup */
+        closeLogin.addEventListener("click", () => {
+        loginPopup.classList.add("hide");
+        });
+
+        /* klik area gelap = tutup */
+        loginPopup.addEventListener("click", e => {
+        if (e.target === loginPopup) {
+            loginPopup.classList.add("hide");
+        }
+        });
+    </script>
+
+    <script>
+        function loginProses() {
+        const userIn = document.getElementById("loginUser").value;
+        const passIn = document.getElementById("loginPass").value;
+
+        const storedUser = localStorage.getItem("username");
+        const storedPass = localStorage.getItem("password");
+
+        if (userIn === storedUser && passIn === storedPass) {
+            alert("Login berhasil!");
+            loginPopup.classList.add("hide");
+        } else {
+            alert("Username atau password salah!");
+        }
+        }
+        </script>
+
+
+
+                
     <footer>
         Copyright &copy: Cookify - 2025
     </footer>
@@ -548,6 +703,7 @@
     
     </body>
     </html>
+
 
 
 
