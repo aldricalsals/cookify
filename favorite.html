@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favorite</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f6f6f6;
+}
+
+/* NAV */
+nav {
+    background: #2b2926;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* CONTAINER */
+.favorite-container {
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* GRID */
+.favorite-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+/* CARD */
+.favorite-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.favorite-card:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE */
+.favorite-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.favorite-content {
+    padding: 10px;
+}
+
+.favorite-content h4 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.favorite-content p {
+    font-size: 12px;
+    color: #555;
+}
+
+/* REMOVE LOVE */
+.remove-favorite {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: white;
+    border-radius: 50%;
+    padding: 5px 7px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* EMPTY */
+.empty {
+    text-align: center;
+    color: #777;
+    margin-top: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>❤️ Favorite Resep</nav>
+
+<div class="favorite-container">
+    <div id="favoriteGrid" class="favorite-grid"></div>
+    <div id="emptyText" class="empty">Belum ada favorit</div>
+</div>
+
+<script>
+const grid = document.getElementById("favoriteGrid");
+const emptyText = document.getElementById("emptyText");
+
+let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+function renderFavorite() {
+    grid.innerHTML = "";
+
+    if (favorites.length === 0) {
+        emptyText.style.display = "block";
+        return;
+    }
+
+    emptyText.style.display = "none";
+
+    favorites.forEach((item, index) => {
+        const card = document.createElement("div");
+        card.className = "favorite-card";
+
+        card.innerHTML = `
+            <span class="remove-favorite" onclick="removeFavorite(${index})">❤️</span>
+            <img src="${item.img}">
+            <div class="favorite-content">
+                <h4>${item.title}</h4>
+                <p>${item.desc}</p>
+            </div>
+        `;
+
+        grid.appendChild(card);
+    });
+}
+
+function removeFavorite(index) {
+    favorites.splice(index, 1);
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+    renderFavorite();
+}
+
+renderFavorite();
+</script>
+
+</body>
+</html>
