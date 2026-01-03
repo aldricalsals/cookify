@@ -677,11 +677,11 @@
     
      <!-- LOGIN POPUP -->
     <div class="login-overlay hide" id="popupAuth">
-        <div class="login-container">
+        <div class="login-box">
             <span class="close-login" id="closeAuth">✕</span>
             <!-- LOGIN -->
             <div id="loginBox">
-                <h1>User Login</h1>
+                <h1>Login</h1>
                 <div class="input-box">
                     <img src="user.png" alt="icon">
                     <input type="password" id="loginPass" placeholder="password">
@@ -724,6 +724,8 @@
             openLogin.onclick = e => {
                 e.preventDefault();
                 popup.classList.remove("hide");
+                loginBox.style.display = "block";
+                registerBox.style.display = "none";
             };
             closeAuth.onclick = () => popup.classList.add("hide");
             popup.onclick = e => {
@@ -742,9 +744,11 @@
         });
         /*== LOGIN ==*/
         function loginProses(){
+            const user = document.getElementById("loginUser").value;
+            const pass = document.getElementById("loginPass").value;
             if (
-                loginUser.value === localStorage.getItem("username") &&
-                loginPass.value === localStorage.getItem("password")
+                user === localStorage.getItem("username") &&
+                pass === localStorage.getItem("password")
             ){
                 alert("Login berhasil!");
                 document.getElementById("popupAuth").classList.add("hide");
@@ -754,12 +758,14 @@
         }
         /*== REGISTER ==*/
         function registerProses(){
-            if (!regUser.value || !regPass.value){
+            const user = document.getElementById("regUser").value;
+            const pass = document.getElementById("regPass").value;
+            if (!user || !pass){
                 alert("Isi semua data!");
                 return;
             }
-            localStorage.setItem("username", regUser.value);
-            localStorage.setItem("password", regPass.value);
+            localStorage.setItem("username", user);
+            localStorage.setItem("password", pass);
             alert("Register berhasil, silakan login!");
             document.getElementById("registerBox").style.display = "none";
             document.getElementById("loginBox").style.display = "block";
