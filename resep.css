@@ -149,82 +149,6 @@ nav ul li a:hover{
     opacity: 0.8;
 }
 
-/* LIST BAHAN */
-.ingredient-list {
-    display: flex;
-    gap: 35px;
-    justify-content: center;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 15px 20px;
-}
-
-/* ITEM */
-.ingredient {
-    position: relative;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.ingredient img {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    border: 3px solid #9dbb61;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-.ingredient span {
-    display: block;
-    margin-top: 6px;
-    font-size: 13px;
-}
-
-/* ACTIVE */
-.ingredient.active img {
-    border-color: #56723c;
-    transform: scale(1.05);
-}
-
-/* CHECK */
-.check {
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    width: 22px;
-    height: 22px;
-    background: #56723c;
-    color: white;
-    border-radius: 50%;
-    font-size: 14px;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.ingredient.active .check {
-    display: flex;
-}
-
-
-/* BUTTON */
-.btn-search {
-    margin-top: 15px;
-    padding: 6px 18px;
-    border: none;
-    border-radius: 6px;
-    background: #56723c;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.btn-search:hover {
-    background: #6c8a4f;
-}
-
 .header{
     padding-left: 60px;
     background-image: url(beranda.png);
@@ -885,6 +809,7 @@ form .btn:hover{
         padding: 20px;
     }
 }
+
 
 
 
