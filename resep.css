@@ -925,6 +925,57 @@ form textarea::placeholder{
         transform: translateX(0);
     }
 }
+.auth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.auth-overlay.hide {
+  display: none;
+}
+
+.auth-box {
+  background: #fff;
+  padding: 2rem;
+  width: 300px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.auth-box.hide {
+  display: none;
+}
+
+.auth-box input,
+.auth-box button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.auth-box span {
+  color: green;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.back-btn {
+  background: #ccc;
+}
 
 
 /* ===============================

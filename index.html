@@ -644,78 +644,86 @@
     
      <!-- LOGIN POPUP -->
     <!-- AUTH POPUP -->
-        <div class="login-overlay hide" id="loginPopup">
-    <div class="login-container">
-        <span class="close-login" id="closeLogin">✕</span>
+<div class="auth-overlay hide" id="authPopup">
 
-        <div class="line"></div>
-        <h1>User Login</h1>
+  <!-- LOGIN -->
+  <div class="auth-box" id="loginBox">
+    <button class="close-btn" onclick="closeAuth()">✕</button>
+    <h2>Login</h2>
 
-        <div class="input-box">
-        <img src="user.png" class="icon">
-        <input type="text" id="loginUser" placeholder="username">
-        </div>
+    <input type="text" id="loginUser" placeholder="Username">
+    <input type="password" id="loginPass" placeholder="Password">
 
-        <div class="input-box">
-        <img src="lock.png" class="icon">
-        <input type="password" id="loginPass" placeholder="password">
-        </div>
+    <button onclick="loginProses()">Login</button>
 
-        <a href="#" class="forgot">Forgot Password?</a>
+    <p>
+      Belum punya akun?
+      <span onclick="showRegister()">Register</span>
+    </p>
+  </div>
 
-        <button onclick="loginProses()">Login</button>
+  <!-- REGISTER -->
+  <div class="auth-box hide" id="registerBox">
+    <button class="close-btn" onclick="closeAuth()">✕</button>
+    <h2>Register</h2>
 
-        <p style="margin-top:15px; font-size:14px;">
-        Belum punya akun?
-        <a href="register.html" style="color:#2f7a3d; font-weight:500;">
-            Register
-        </a>
-        </p>
+    <input type="text" id="regUser" placeholder="Username">
+    <input type="password" id="regPass" placeholder="Password">
 
-        <div class="line"></div>
-    </div>
-    </div>
+    <button onclick="registerProses()">Register</button>
 
-    <script>
-        const loginPopup = document.getElementById("loginPopup");
-        const openLogin = document.getElementById("openLogin");
-        const closeLogin = document.getElementById("closeLogin");
+    <p>
+      Sudah daftar?
+      <span onclick="showLogin()">Login</span>
+    </p>
 
-        /* buka popup */
-        openLogin.addEventListener("click", e => {
-        e.preventDefault();
-        loginPopup.classList.remove("hide");
-        });
+    <!-- TOMBOL BALIK KE WEB -->
+    <button class="back-btn" onclick="closeAuth()">Masuk ke Web</button>
+  </div>
 
-        /* tutup popup */
-        closeLogin.addEventListener("click", () => {
-        loginPopup.classList.add("hide");
-        });
+</div>
+<script>
+const authPopup = document.getElementById("authPopup");
+const loginBox = document.getElementById("loginBox");
+const registerBox = document.getElementById("registerBox");
 
-        /* klik area gelap = tutup */
-        loginPopup.addEventListener("click", e => {
-        if (e.target === loginPopup) {
-            loginPopup.classList.add("hide");
-        }
-        });
-    </script>
+function openAuth() {
+  authPopup.classList.remove("hide");
+  showLogin();
+}
 
-    <script>
-        function loginProses() {
-        const userIn = document.getElementById("loginUser").value;
-        const passIn = document.getElementById("loginPass").value;
+function closeAuth() {
+  authPopup.classList.add("hide");
+}
 
-        const storedUser = localStorage.getItem("username");
-        const storedPass = localStorage.getItem("password");
+function showRegister() {
+  loginBox.classList.add("hide");
+  registerBox.classList.remove("hide");
+}
 
-        if (userIn === storedUser && passIn === storedPass) {
-            alert("Login berhasil!");
-            loginPopup.classList.add("hide");
-        } else {
-            alert("Username atau password salah!");
-        }
-        }
-        </script>
+function showLogin() {
+  registerBox.classList.add("hide");
+  loginBox.classList.remove("hide");
+}
+
+function registerProses() {
+  localStorage.setItem("username", regUser.value);
+  localStorage.setItem("password", regPass.value);
+  alert("Register berhasil!");
+}
+
+function loginProses() {
+  if (
+    loginUser.value === localStorage.getItem("username") &&
+    loginPass.value === localStorage.getItem("password")
+  ) {
+    alert("Login berhasil!");
+    closeAuth(); // BALIK KE WEB
+  } else {
+    alert("Username atau password salah!");
+  }
+}
+</script>
 
 
 
