@@ -1,3 +1,7 @@
-if(sessionStorage.getItem("isLogin") !== "true"){
-    window.location.href = "login.html";
+const isLogin = sessionStorage.getItem("isLogin");
+
+if (isLogin) {
+    console.log("User sudah login");
+} else {
+    console.log("User belum login");
 }
