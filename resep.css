@@ -708,6 +708,12 @@ footer {
 .contact .heading{
     position: relative;
     z-index: 1;
+    animation: fadeDown 0.8s ease-out;
+}
+.contact .heading h2{
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--second-color);
 }
 .contact::before{
     content: "";
@@ -743,11 +749,13 @@ footer {
 .contact-info{
     flex: 1 1 2rem;
     text-align: left;
+    animation: slideLeft 0.8s ease forwards;
 }
 .contact-form {
     flex: 1 1 2rem;
     display: flex;
     justify-content: center;
+    animation: slideRight 0.8s ease forwards;
 }
 .contact-info h2{
     font-size: 1.7rem;
@@ -759,19 +767,19 @@ footer {
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
-.addres{
+.address{
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
 }
-.addres i{
+.address i{
     display: flex;
     align-items: center;
     margin-bottom: 0.8rem;
     font-size: 22px;
     color: var(--text-color);
 }
-.addres span{
+.address span{
     font-size: 1rem;
     margin-left: 1rem;
 }
@@ -818,11 +826,56 @@ form .btn{
     text-transform: uppercase;
     font-weight: bold;
     border: none;
+    cursor: pointer;
+    transition: 0.3 ease;
 }
 form .btn:hover{
     background: var(--main-color);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+form input,
+form textarea,
+form .btn{
+    font-family: inherit;
+    font-size: 1rem;
+}
+form input::placeholder,
+form textarea::placeholder{
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+@keyframes fadeDown {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideLeft{
+    from{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
+@keyframes slideRight{
+    from{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 /* ===============================
    EXTRA SMALL DEVICE (HP ASLI)
    =============================== */
