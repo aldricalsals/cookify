@@ -712,7 +712,6 @@ footer {
 .contact .heading{
     position: relative;
     z-index: 1;
-    animation: fadeDown 0.8s ease-out;
 }
 .contact .heading h2{
     text-align: center;
@@ -754,13 +753,11 @@ footer {
 .contact-info{
     flex: 1 1 2rem;
     text-align: left;
-    animation: slideLeft 0.8s ease forwards;
 }
 .contact-form {
     flex: 1 1 2rem;
     display: flex;
     justify-content: center;
-    animation: slideRight 0.8s ease forwards;
 }
 .contact-info h2{
     font-size: 1.7rem;
@@ -868,6 +865,33 @@ form input::placeholder,
 form textarea::placeholder{
     font-size: 0.95rem;
     opacity: 0.8;
+}
+/*== Scroll Animation==*/
+.reveal{
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all0.7s ease;
+}
+.reveal.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.reveal-left{
+    transform: translateY(-40px);
+}
+.reveal-right{
+    transform: translateY(40px);
+}
+.reveal-left.active,
+.reveal-right.active{
+    transform: translateX(0);
+}
+.contact-form .btn{
+    transition: 0.4s ease;
+}
+
+.reveal-right.active .btn{
+    transform: scale(1.05);
 }
 @keyframes fadeDown {
     from{

@@ -636,11 +636,11 @@
 
     <!-- Contact Us-->
      <section class="contact" id="contact">
-        <div class="heading">
+        <div class="heading reveal">
             <h2>Hubungi Kami</h2>
         </div>
         <div class="contact-container">
-            <div class="contact-info">
+            <div class="contact-info reveal-left">
                 <h2>Informasi Lebih Lanjut</h2>
                 <p>Jika Anda memiliki masukan, saran, atau pertanyaan mengenai bahan, rasa, atau ketersediaan, 
                     silakan hubungi kami melalui formulir di bawah ini.</p>
@@ -664,7 +664,7 @@
                 </div>
             </div>
         <!-- Contact Form -->
-                <div class="contact-form">
+                <div class="contact-form reveal-right">
                     <form id="demo-form">
                         <input type="text" name="name" placeholder="Name*" required>
                         <input type="email" name="email" placeholder="Email*" required>
@@ -674,6 +674,21 @@
                 </div>
         </div>
      </section>
+     <script>
+        const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active'); // biar bisa animate ulang
+                }
+            });
+        },{
+            threshold: 0.2
+        });
+        reveals.forEach(el => observer.observe(el));
+    </script>
 
 
 
