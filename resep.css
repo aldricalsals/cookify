@@ -32,7 +32,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     background: #ffffff;
-    padding: 12px 0px 7px 50px;
+    padding: 12px 50px 7px 50px;
 }
 
 .logo {
@@ -752,4 +752,5 @@ form .btn:hover{
         padding: 20px;
     }
 }
+
 
