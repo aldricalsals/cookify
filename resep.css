@@ -621,11 +621,14 @@ footer {
 }
 .social{
     margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 .social a{
     font-size: 24px;
     color: var(--second-color);
-    margin-right: 1rem;
+    margin-right: 1.2rem;
 }
 .social a:hover{
     color: var(--second-color);
