@@ -643,36 +643,7 @@ footer {
     padding: 14px 0;
     font-size: 14px;
 }
-/*== About Us ==*/
-.about{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: center;
-    max-width: 1100px;
-    margin: auto;
-    padding: 3rem 1rem;
-}
-.about-img{
-    display: flex;
-    justify-content: flex-start;
-}
-.about-img img{
-    width: 100%;
-    max-width: 450px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-.about-text span{
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--text-color);
-}
-.about-text p{
-    font-size: 0.938rem;
-    margin: 0.5rem 0 1.4rem;
-}
+
 /*== Contact Us ==*/
 .contact{
     position: relative;
