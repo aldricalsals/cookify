@@ -1,5 +1,5 @@
 /*=Hash PW=*/
-function hashPassword(oassword){
+function hashPassword(password){
     return btoa(password);
 }
 /*=Register=*/
@@ -12,11 +12,11 @@ function registerUser(nama, email, password){
     localStorage.setItem("user", JSON.stringify(user));
 }
 /*=Login=*/
-function loginUSer(email, password){
+function loginUser(email, password){
     const user = JSON.parse(localStorage.getItem("user"));
     if (!user) return false;
 
-    return ( email == user.email && hashPassword(password) == user.password);
+    return email == user.email && hashPassword(password) == user.password;
 }
 /*=Session=*/
 function setSession(){

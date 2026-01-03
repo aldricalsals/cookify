@@ -32,10 +32,10 @@
 
     <script src="signup.js"></script>
     <script>
-        document.querySelector("form").addEventListener("submit", function(e){
+        document.querySelector("loginform").addEventListener("submit", function(e){
             e.preventDefault();
-            const email = document.getElementById("loginEmail").value;
-            const password = document.getElementById("loginPassword").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
             if(loginUser(email, password)){
                 setSession();
                 window.location.href = "index.html";
