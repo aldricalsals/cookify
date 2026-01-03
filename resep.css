@@ -229,11 +229,11 @@ nav ul li a:hover{
     padding-left: 60px;
     background-image: url(beranda.png);
     background-position: center;
-    background-size: 1265px 730px;
+    background-size: 1265px 750px;
     margin: 0;
     text-align:center;
     padding-top: 10px;   
-    padding-bottom: 350px;
+    padding-bottom: 250px;
 }
 
 .cookify {
@@ -752,5 +752,6 @@ form .btn:hover{
         padding: 20px;
     }
 }
+
 
 
