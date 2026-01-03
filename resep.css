@@ -614,7 +614,6 @@ footer {
     align-items: center;
     margin-bottom: 0.8rem;
     font-size: 22px;
-    min-width: 24px;
     color: var(--text-color);
 }
 .addres span{
