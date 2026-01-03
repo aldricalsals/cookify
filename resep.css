@@ -700,13 +700,15 @@ form .btn:hover{
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.55);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    z-index: 2000;
+    z-index: 3000;
     padding: 15px;
 }
-
+.login-overlay.show {
+    display: flex;
+}
 .login-card {
     background: #fff;
     width: 100%;

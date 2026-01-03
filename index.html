@@ -560,21 +560,24 @@
         const loginPopup = document.getElementById("loginPopup");
         const closeLogin = document.getElementById("closeLogin");
 
-        openLogin.onclick = () => {
-            loginPopup.classList.remove("hide");
-        };
+        openLogin.addEventListener("click", () => {
+            loginPopup.classList.add("show");
+            document.body.style.overflow = "hidden"; // header aman
+        });
 
-        closeLogin.onclick = () => {
-            loginPopup.classList.add("hide");
-        };
+        closeLogin.addEventListener("click", () => {
+            loginPopup.classList.remove("show");
+            document.body.style.overflow = "";
+        });
 
-        loginPopup.onclick = () => {
-            loginPopup.classList.add("hide");
-        };
+        loginPopup.addEventListener("click", () => {
+            loginPopup.classList.remove("show");
+            document.body.style.overflow = "";
+        });
 
-        document.querySelector(".login-card").onclick = e => {
+        document.querySelector(".login-card").addEventListener("click", e => {
             e.stopPropagation();
-        };
+        });
     </script>
 
     
