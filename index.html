@@ -643,87 +643,79 @@
 
     
      <!-- LOGIN POPUP -->
-    <!-- AUTH POPUP -->
-<div class="auth-overlay hide" id="authPopup">
+        <!-- AUTH POPUP -->
+            <div class="login-overlay hide" id="loginPopup">
+    <div class="login-container">
+        <span class="close-login" id="closeLogin">✕</span>
 
-  <!-- LOGIN -->
-  <div class="auth-box" id="loginBox">
-    <button class="close-btn" onclick="closeAuth()">✕</button>
-    <h2>Login</h2>
+        <div class="line"></div>
+        <h1>User Login</h1>
 
-    <input type="text" id="loginUser" placeholder="Username">
-    <input type="password" id="loginPass" placeholder="Password">
+        <div class="input-box">
+        <img src="user.png" class="icon">
+        <input type="text" id="loginUser" placeholder="username">
+        </div>
 
-    <button onclick="loginProses()">Login</button>
+        <div class="input-box">
+        <img src="lock.png" class="icon">
+        <input type="password" id="loginPass" placeholder="password">
+        </div>
 
-    <p>
-      Belum punya akun?
-      <span onclick="showRegister()">Register</span>
-    </p>
-  </div>
+        <a href="#" class="forgot">Forgot Password?</a>
 
-  <!-- REGISTER -->
-  <div class="auth-box hide" id="registerBox">
-    <button class="close-btn" onclick="closeAuth()">✕</button>
-    <h2>Register</h2>
+        <button onclick="loginProses()">Login</button>
 
-    <input type="text" id="regUser" placeholder="Username">
-    <input type="password" id="regPass" placeholder="Password">
+        <p style="margin-top:15px; font-size:14px;">
+        Belum punya akun?
+        <a href="register.html" style="color:#2f7a3d; font-weight:500;">
+            Register
+        </a>
+        </p>
 
-    <button onclick="registerProses()">Register</button>
+        <div class="line"></div>
+    </div>
+    </div>
 
-    <p>
-      Sudah daftar?
-      <span onclick="showLogin()">Login</span>
-    </p>
+    <script>
+        const loginPopup = document.getElementById("loginPopup");
+        const openLogin = document.getElementById("openLogin");
+        const closeLogin = document.getElementById("closeLogin");
 
-    <!-- TOMBOL BALIK KE WEB -->
-    <button class="back-btn" onclick="closeAuth()">Masuk ke Web</button>
-  </div>
+        /* buka popup */
+        openLogin.addEventListener("click", e => {
+        e.preventDefault();
+        loginPopup.classList.remove("hide");
+        });
 
-</div>
-<script>
-const authPopup = document.getElementById("authPopup");
-const loginBox = document.getElementById("loginBox");
-const registerBox = document.getElementById("registerBox");
+        /* tutup popup */
+        closeLogin.addEventListener("click", () => {
+        loginPopup.classList.add("hide");
+        });
 
-function openAuth() {
-  authPopup.classList.remove("hide");
-  showLogin();
-}
+        /* klik area gelap = tutup */
+        loginPopup.addEventListener("click", e => {
+        if (e.target === loginPopup) {
+            loginPopup.classList.add("hide");
+        }
+        });
+    </script>
 
-function closeAuth() {
-  authPopup.classList.add("hide");
-}
+    <script>
+        function loginProses() {
+        const userIn = document.getElementById("loginUser").value;
+        const passIn = document.getElementById("loginPass").value;
 
-function showRegister() {
-  loginBox.classList.add("hide");
-  registerBox.classList.remove("hide");
-}
+        const storedUser = localStorage.getItem("username");
+        const storedPass = localStorage.getItem("password");
 
-function showLogin() {
-  registerBox.classList.add("hide");
-  loginBox.classList.remove("hide");
-}
-
-function registerProses() {
-  localStorage.setItem("username", regUser.value);
-  localStorage.setItem("password", regPass.value);
-  alert("Register berhasil!");
-}
-
-function loginProses() {
-  if (
-    loginUser.value === localStorage.getItem("username") &&
-    loginPass.value === localStorage.getItem("password")
-  ) {
-    alert("Login berhasil!");
-    closeAuth(); // BALIK KE WEB
-  } else {
-    alert("Username atau password salah!");
-  }
-}
-</script>
+        if (userIn === storedUser && passIn === storedPass) {
+            alert("Login berhasil!");
+            loginPopup.classList.add("hide");
+        } else {
+            alert("Username atau password salah!");
+        }
+        }
+        </script>
 
 
 
