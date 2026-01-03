@@ -549,15 +549,39 @@ h2 {
     font-weight: bold;
 }
 
-.banner-orange {
-    background: #e69527;
-    background: url('banner.png') center/cover no-repeat;
+
+/* LOGIN POPUP */
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
 
-.banner-dark {
-    background: #333;
-    background: url('ayamm.png') center/cover no-repeat;
+.login-overlay.hide {
+  display: none;
 }
+
+.login-container {
+  width: 380px;
+  background: #f7f6f2;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.close-login {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 
 footer {
     width: 100%;
@@ -810,6 +834,7 @@ form .btn:hover{
         padding: 20px;
     }
 }
+
 
 
 
