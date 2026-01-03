@@ -16,7 +16,7 @@ function loginUser(email, password){
     const user = JSON.parse(localStorage.getItem("user"));
     if (!user) return false;
 
-    return email == user.email && hashPassword(password) == user.password;
+    return email === user.email && hashPassword(password) === user.password;
 }
 /*=Session=*/
 function setSession(){

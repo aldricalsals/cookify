@@ -42,10 +42,10 @@
 
     <script src="signup.js"></script>
     <script>
-        document.querySelector("form").addEventListener("submit", function(e){
+        document.querySelector("signupform").addEventListener("submit", function(e){
             e.preventDefault();
             const nama = document.getElementById("nama").value;
-            const emai; = document.getElementById("email").value;
+            const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
             const confirm = document.getElementById("confirm").value;
             if(password !== confirm){
