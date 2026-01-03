@@ -529,27 +529,6 @@ h2 {
 }
 
 
-/* Banner Section */
-.banner-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin-bottom: 60px;
-}
-
-.banner {
-    height: 180px;
-    border-radius: 16px;
-    padding: 25px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: bold;
-}
-
-
 /* LOGIN POPUP */
 .login-overlay {
   position: fixed;
@@ -834,6 +813,7 @@ form .btn:hover{
         padding: 20px;
     }
 }
+
 
 
 
