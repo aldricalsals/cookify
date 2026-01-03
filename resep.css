@@ -814,6 +814,8 @@ form input, textarea{
 form input::placeholder, 
 textarea::placeholder{
     color: var(--second-color);
+    font-size: 0.95rem;
+    opacity: 0.8;
 }
 form textarea{
     resize: none;
