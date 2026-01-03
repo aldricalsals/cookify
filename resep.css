@@ -822,49 +822,7 @@ form .btn{
 form .btn:hover{
     background: var(--main-color);
 }
-/*== Auth Pop Up ==*/
-.auth-box {
-  width: 380px;
-  background: #f7f6f2;
-  padding: 25px;
-  border-radius: 15px;
-  position: relative;
-  overflow: hidden;
-}
-/*== form umum ==*/
-.auth-form {
-  width: 100%;
-  transition: 0.4s ease;
-  position: absolute;
-  top: 25px;
-  left: 0;
-  opacity: 0;
-  transform: translateX(100%);
-}
-/* aktif */
-.auth-form.active {
-  opacity: 1;
-  transform: translateX(0);
-  position: relative;
-}
-/*== login keluar ke kiri ==*/
-.auth-form.exit-left {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-/*== register masuk dari kanan ==*/
-.auth-form.enter-right {
-  transform: translateX(0);
-  opacity: 1;
-}
-.switch-text {
-  margin-top: 15px;
-  font-size: 14px;
-}
-.switch-text a {
-  color: #2f7a3d;
-  font-weight: 500;
-}
+
 /* ===============================
    EXTRA SMALL DEVICE (HP ASLI)
    =============================== */
