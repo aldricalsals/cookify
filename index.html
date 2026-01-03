@@ -21,11 +21,7 @@
                     <li><a href="favorite.html" class="fav">❤️</a></li>
                 </ul>
         
-             <div class="acc">
-                <a href="akun.html">  <!-- arahkan ke halaman yang kamu mau -->
-                    <img src="acc.png" alt="Akun">
-                </a>
-            </div>
+            
         </nav>
 
     <div class="header">
@@ -544,6 +540,43 @@
     <footer>
         Copyright &copy: Cookify - 2025
     </footer>
+    <!-- Login Pop Up -->
+    <div class="loginoverlay hide" id="loginPopup">
+        <div class="login-card">
+            <span class="login-close" id="closeLogin"></span>
+            <h2>Login Cookify</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p class="login-footer">
+                Belum punya akun? <a href="#">Daftar</a>
+            </p>
+        </div>
+    </div>
+    <script>
+        const openLogin = document.getElementById("openLogin");
+        const loginPopup = document.getElementById("loginPopup");
+        const closeLogin = document.getElementById("closeLogin");
+
+        openLogin.onclick = () => {
+            loginPopup.classList.remove("hide");
+        };
+
+        closeLogin.onclick = () => {
+            loginPopup.classList.add("hide");
+        };
+
+        loginPopup.onclick = () => {
+            loginPopup.classList.add("hide");
+        };
+
+        document.querySelector(".login-card").onclick = e => {
+            e.stopPropagation();
+        };
+    </script>
+
     
     </body>
     </html>
