@@ -548,13 +548,22 @@ footer {
 /*== About Us ==*/
 .about{
     display: grid;
-    grid-template-columns: repeat(2.1fr);
-    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 3rem 1rem;
+}
+.about-img{
+    display: flex;
+    justify-content: flex-start;
 }
 .about-img img{
-    width: 80%;
+    width: 100%;
+    max-width: 450px;
     border-radius: 10px;
-    object-fit: contain;
+    object-fit: cover;
 }
 .about-text span{
     font-size: 14px;
