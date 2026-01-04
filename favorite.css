@@ -1,3 +1,31 @@
+.fav-nav {
+    background: #2b2926;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 18px;
+}
+
+.back-btn {
+    position: absolute;
+    left: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: white;
+    color: #2b2926;
+}
+
 /* ===== LOVE DI PRODUCT CARD ===== */
 .favorite-btn {
     position: absolute;
