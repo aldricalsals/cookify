@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lupa Password | Cookify</title>
+    <link rel="stylesheet" href="login.css"> </head>
+<body>
+
+    <div class="login-container">
+        <h2>Lupa Password</h2>
+        <p style="font-size: 13px; color: #666; margin-bottom: 20px;">Masukkan email terdaftar untuk melihat password Anda.</p>
+
+        <div id="infoBox" class="error-box" style="background: #e3f2fd; color: #0d47a1; border-color: #bbdefb;"></div>
+
+        <form id="forgotForm">
+            <div class="input-box">
+                <label for="forgotEmail">Email</label>
+                <input type="email" id="forgotEmail" placeholder="nama@email.com" required>
+            </div>
+
+            <button type="submit" class="btn-login">Cek Password</button>
+
+            <p class="register-text">
+                Ingat password? <a href="login.html">Login</a>
+            </p>
+        </form>
+    </div>
+
+    <script src="signup.js"></script>
+    <script>
+        const form = document.getElementById('forgotForm');
+        const box = document.getElementById('infoBox');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('forgotEmail').value;
+            const passwordDitemukan = forgotPassword(email);
+
+            box.style.display = "block";
+            if (passwordDitemukan) {
+                box.style.background = "#e8f5e9";
+                box.style.color = "#2e7d32";
+                box.style.border = "1px solid #c8e6c9";
+                box.innerHTML = `Password Anda adalah: <strong>${passwordDitemukan}</strong>`;
+            } else {
+                box.style.background = "#ffebee";
+                box.style.color = "#c62828";
+                box.style.border = "1px solid #ef9a9a";
+                box.innerText = "Email tidak terdaftar!";
+            }
+        });
+    </script>
+</body>
+</html>
