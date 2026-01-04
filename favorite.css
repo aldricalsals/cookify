@@ -14,8 +14,10 @@
     gap: 0;
 }
 .back-btn img{
-    width: 130px;              
-    height: auto;;
+    width: auto !important;
+    height: 16px !important;
+    max-width: 16px;
+    object-fit: contain;
 }
 .fav-title{
     font-size: 18px;
