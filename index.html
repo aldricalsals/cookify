@@ -649,29 +649,7 @@
 
     
 
-    <script>
-        const loginPopup = document.getElementById("loginPopup");
-        const openLogin = document.getElementById("openLogin");
-        const closeLogin = document.getElementById("closeLogin");
-
-        /* buka popup */
-        openLogin.addEventListener("click", e => {
-        e.preventDefault();
-        loginPopup.classList.remove("hide");
-        });
-
-        /* tutup popup */
-        closeLogin.addEventListener("click", () => {
-        loginPopup.classList.add("hide");
-        });
-
-        /* klik area gelap = tutup */
-        loginPopup.addEventListener("click", e => {
-        if (e.target === loginPopup) {
-            loginPopup.classList.add("hide");
-        }
-        });
-    </script>
+    
 
     <script>
         function loginProses() {
