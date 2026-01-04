@@ -40,6 +40,33 @@
         </form>
     </div>
 
+    <script src="signup.js"></script>
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); 
+
+        const nama = document.getElementById('nama').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const confirm = document.getElementById('confirm').value;
+        const errorBox = document.getElementById('regError'); 
+
+        if (password !== confirm) {
+            if(errorBox) {
+                errorBox.innerText = "Password tidak cocok!";
+                errorBox.style.display = "block";
+            } else {
+                alert("Password tidak cocok!");
+            }
+            return;
+        }
+
+        registerUser(nama, email, password);
+        window.location.href = "login.html";
+    });
+</script>
    
 </body>
 </html>
+
