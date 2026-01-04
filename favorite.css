@@ -6,7 +6,9 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 0 16px;
+    height: 56px;
+    text-align: center;
+    font-size: 18px;
 }
 .back-btn{
     position: absolute;
@@ -18,8 +20,8 @@
     gap: 0;
 }
 .back-btn img{
-    width: 14px !important;
-    height: 14px !important;
+    width: 14px;
+    height: 14px;
     max-width: 14px;
     max-height: 14px;
     object-fit: contain;
