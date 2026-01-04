@@ -7,7 +7,7 @@ function registerUser(nama, email, password){
     const user = {
         nama: nama,
         email: email,
-        password: hashPassword(password)
+        password: btoa(password)
     };
     localStorage.setItem("user", JSON.stringify(user));
 }
@@ -25,4 +25,5 @@ function setSession(){
 function logout(){
     sessionStorage.removeItem("isLogin");
     window.location.href = "login.html";
+
 }
