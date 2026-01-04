@@ -9,15 +9,14 @@
     height: 56px;
 }
 .back-btn{
-    position: absolute;
-    left: 20px;
-    display: flex;
-    align-items: center;
+    padding: 1px 9px 1px 9px;
+    text-align: center;
+    position: relative;
 }
 .back-btn img{
-    height: 26px;
-    width: auto;
-    align-items: contain;
+    padding-top: 0;
+    width: 25px;
+    height: auto;
 }
 .fav-title{
     font-size: 18px;
