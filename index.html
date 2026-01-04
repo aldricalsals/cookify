@@ -793,36 +793,31 @@ function registerProses() {
     <!-- LOGIN POPUP -->
         <!-- AUTH POPUP -->
             <div class="login-overlay hide" id="loginPopup">
-    <div class="login-container">
-        <span class="close-login" id="closeLogin">✕</span>
+                <div class="login-container">
+                    <span class="close-login" id="closeLogin">✕</span>
+                    <div class="line"></div>
+                    <h1>User Login</h1>
+                    <div class="input-box">
+                        <img src="user.png" class="icon">
+                        <input type="text" id="loginUser" placeholder="username">
+                    </div>
+                    <div class="input-box">
+                        <img src="lock.png" class="icon">
+                        <input type="password" id="loginPass" placeholder="password">
+                    </div>
+                    <a href="#" class="forgot">Forgot Password?</a>
+                        <button onclick="loginProses()">Login</button>
 
-        <div class="line"></div>
-        <h1>User Login</h1>
+                        <p style="margin-top:15px; font-size:14px;">
+                            Belum punya akun?
+                            <a href="register.html" style="color:#2f7a3d; font-weight:500;">
+                                    Register
+                            </a>
+                        </p>
 
-        <div class="input-box">
-        <img src="user.png" class="icon">
-        <input type="text" id="loginUser" placeholder="username">
-        </div>
-
-        <div class="input-box">
-        <img src="lock.png" class="icon">
-        <input type="password" id="loginPass" placeholder="password">
-        </div>
-
-        <a href="#" class="forgot">Forgot Password?</a>
-
-        <button onclick="loginProses()">Login</button>
-
-        <p style="margin-top:15px; font-size:14px;">
-        Belum punya akun?
-        <a href="register.html" style="color:#2f7a3d; font-weight:500;">
-            Register
-        </a>
-        </p>
-
-        <div class="line"></div>
-    </div>
-    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
 
     <script>
         const loginPopup = document.getElementById("loginPopup");
@@ -869,8 +864,5 @@ function registerProses() {
         Copyright &copy: Cookify - 2025
     </footer>
 
-    
     </body>
     </html>
-
-
