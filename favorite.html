@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+link
 <title>Favorite</title>
 
 <style>
@@ -78,6 +79,40 @@ body {
     text-align: center;
     color: #777;
     margin-top: 50px;
+}
+
+.fav-nav {
+    background: #2b2926;
+    color: white;
+    height: 56px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+    text-align: left;
+}
+.back-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    align-items: center;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.back-btn img{
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+.fav-title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: 600;
 }
 </style>
 </head>
