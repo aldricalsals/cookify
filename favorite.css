@@ -5,7 +5,7 @@
     padding: 0 16px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    position: relative;
     gap: 10px;
     text-align: left;
 }
@@ -14,6 +14,9 @@
     align-items: center;
     position: absolute;
     align-items: center;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .back-btn img{
     width: 14px;
@@ -21,6 +24,10 @@
     display: block;
 }
 .fav-title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     font-size: 18px;
     font-weight: 600;
 }
