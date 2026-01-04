@@ -1,11 +1,12 @@
 .fav-nav {
     background: #2b2926;
     color: white;
-    padding: 56px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    height: 56px;
 }
 .back-btn{
     position: absolute;
