@@ -42,31 +42,39 @@
 
     <script src="signup.js"></script>
 
-<script>
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault(); 
+<script src="signup.js"></script>
 
-        const nama = document.getElementById('nama').value;
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-        const confirm = document.getElementById('confirm').value;
-        const errorBox = document.getElementById('regError'); 
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
 
-        if (password !== confirm) {
-            if(errorBox) {
-                errorBox.innerText = "Password tidak cocok!";
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirm = document.getElementById('confirm').value;
+            const errorBox = document.getElementById('regError'); 
+
+            errorBox.style.display = "none";
+
+            if (password.length < 6) {
+                errorBox.innerText = "Password minimal 6 karakter!";
                 errorBox.style.display = "block";
-            } else {
-                alert("Password tidak cocok!");
+                return;
             }
-            return;
-        }
 
-        registerUser(nama, email, password);
-        window.location.href = "login.html";
-    });
-</script>
+            if (password !== confirm) {
+                errorBox.innerText = "Konfirmasi password tidak cocok!";
+                errorBox.style.display = "block";
+                return;
+            }
+
+            registerUser(nama, email, password);
+
+            window.location.href = "login.html?status=success";
+        });
+    </script>
    
 </body>
 </html>
+
 
