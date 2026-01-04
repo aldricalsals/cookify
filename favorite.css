@@ -2,7 +2,6 @@
     background: #2b2926;
     color: white;
     height: 56px;
-    padding: 0 16px;
     display: flex;
     align-items: center;
     position: relative;
@@ -10,12 +9,16 @@
 .back-btn{
     display: flex;
     align-items: center;
+    position: absolute;
+    align-items: center;
 }
 .back-btn img{
     width: 14px;
     height: 14px;
+    display: block;
 }
 .fav-title{
+    margin: 0 auto;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
