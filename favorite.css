@@ -1,31 +1,27 @@
 .fav-nav {
     background: #2b2926;
     color: white;
-    padding: 15px;
+    padding: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    font-size: 18px;
 }
-
-.back-btn {
+.back-btn{
     position: absolute;
-    left: 15px;
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    padding: 6px 12px;
-    border-radius: 20px;
-    border: 1px solid #fff;
-    transition: 0.3s;
+    left: 20px;
+    display: flex;
+    align-items: center;
 }
-
-.back-btn:hover {
-    background: white;
-    color: #2b2926;
+.back-btn img{
+    height: 36px;
+    width: flex;
+    align-items: center;
 }
-
+.fav-title{
+    font-size: 18px;
+    font-weight: 600;
+}
 /* ===== LOVE DI PRODUCT CARD ===== */
 .favorite-btn {
     position: absolute;
