@@ -1,33 +1,24 @@
 .fav-nav {
     background: #2b2926;
     color: white;
-    padding: 0 20px;
+    height: 56px;
+    padding: 0 16px;
     display: flex;
     align-items: center;
-    justify-content: center;
     position: relative;
-    height: 56px;
-    text-align: center;
-    font-size: 18px;
 }
 .back-btn{
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;          
-    align-items: center;      
-    gap: 0;
+    display: flex;
+    align-items: center;
 }
 .back-btn img{
     width: 14px;
     height: 14px;
-    max-width: 14px;
-    max-height: 14px;
-    object-fit: contain;
-    display: block;
 }
 .fav-title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 18px;
     font-weight: 600;
 }
