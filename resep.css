@@ -164,7 +164,7 @@ nav ul li a:hover{
     margin: 0;
     text-align:center;
     padding-top: 10px;   
-    padding-bottom: 250px;
+    padding-bottom: 290px;
 }
 
 .cookify {
@@ -1051,6 +1051,7 @@ form textarea::placeholder{
         padding: 20px;
     }
 }
+
 
 
 
