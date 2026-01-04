@@ -8,8 +8,7 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <title>Cookify</title>
     <style>
-        .login-container {
-      width: 380px;
+    .login-container {
       text-align: center;
     }
 
@@ -43,7 +42,7 @@
     }
 
     .icon {
-      height: 18px;
+      width: 22px;
       margin-right: 10px;
       opacity: 0.7;
     }
@@ -79,7 +78,8 @@
 .register-text a:hover {
   text-decoration: underline;
 }
-    </style>
+
+  </style>
 </head>
 <body>
     <nav>
@@ -442,10 +442,6 @@
                 </div>
             </div>
         </div>
-
-     
-
-
     
     <script>
             const scrollContainer = document.querySelector(".category-scroll");
@@ -582,6 +578,181 @@
             });
         });
     </script>
+
+
+
+
+    
+     <!-- LOGIN POPUP -->
+    <div class="login-overlay hide" id="loginPopup">
+    <div class="login-container">
+        <span class="close-login" id="closeLogin">✕</span>
+
+        <div class="line"></div>
+        <h1>User Login</h1>
+
+        <div class="input-box">
+        <img src="user.png" class="icon">
+        <input type="text" id="loginUser" placeholder="username">
+        </div>
+
+        <div class="input-box">
+        <img src="lock.png" class="icon">
+        <input type="password" id="loginPass" placeholder="password">
+        </div>
+
+        <a href="#" class="forgot">Forgot Password?</a>
+
+        <button onclick="loginProses()">Login</button>
+
+        <p style="margin-top:15px; font-size:14px;">
+        Belum punya akun?
+        <a href="#" id="openRegister" style="color:#2f7a3d; font-weight:500;">
+            Register
+        </a>
+        </p>
+
+        <div class="line"></div>
+    </div>
+    </div>
+    
+    <!-- REGISTER POPUP -->
+<div class="login-overlay hide" id="registerPopup">
+  <div class="login-container">
+    <span class="close-login" id="closeRegister">✕</span>
+
+    <div class="line"></div>
+    <h1>Register</h1>
+
+    <div class="input-box">
+      <input type="text" id="regUser" placeholder="username">
+    </div>
+
+    <div class="input-box">
+      <input type="password" id="regPass" placeholder="password">
+    </div>
+
+    <div class="input-box">
+      <input type="password" id="regConfirm" placeholder="confirm password">
+    </div>
+
+    <button onclick="registerProses()">Register</button>
+
+    <p style="margin-top:15px; font-size:14px;">
+      Sudah punya akun?
+      <a href="#" id="toLogin" style="color:#2f7a3d;">Login</a>
+    </p>
+
+    <div class="line"></div>
+  </div>
+</div>
+
+    
+
+    <script>
+        const loginPopup = document.getElementById("loginPopup");
+        const openLogin = document.getElementById("openLogin");
+        const closeLogin = document.getElementById("closeLogin");
+
+        /* buka popup */
+        openLogin.addEventListener("click", e => {
+        e.preventDefault();
+        loginPopup.classList.remove("hide");
+        });
+
+        /* tutup popup */
+        closeLogin.addEventListener("click", () => {
+        loginPopup.classList.add("hide");
+        });
+
+        /* klik area gelap = tutup */
+        loginPopup.addEventListener("click", e => {
+        if (e.target === loginPopup) {
+            loginPopup.classList.add("hide");
+        }
+        });
+    </script>
+
+    <script>
+        function loginProses() {
+        const userIn = document.getElementById("loginUser").value;
+        const passIn = document.getElementById("loginPass").value;
+
+        const storedUser = localStorage.getItem("username");
+        const storedPass = localStorage.getItem("password");
+
+        if (userIn === storedUser && passIn === storedPass) {
+            alert("Login berhasil!");
+            loginPopup.classList.add("hide");
+        } else {
+            alert("Username atau password salah!");
+        }
+        }
+        </script>
+
+        <script>
+const registerPopup = document.getElementById("registerPopup");
+const openRegister = document.getElementById("openRegister");
+const closeRegister = document.getElementById("closeRegister");
+const toLogin = document.getElementById("toLogin");
+
+/* buka register dari login */
+openRegister.addEventListener("click", e => {
+  e.preventDefault();
+  loginPopup.classList.add("hide");
+  registerPopup.classList.remove("hide");
+});
+
+/* kembali ke login */
+toLogin.addEventListener("click", e => {
+  e.preventDefault();
+  registerPopup.classList.add("hide");
+  loginPopup.classList.remove("hide");
+});
+
+/* tutup register */
+closeRegister.addEventListener("click", () => {
+  registerPopup.classList.add("hide");
+});
+
+/* klik luar = tutup */
+registerPopup.addEventListener("click", e => {
+  if (e.target === registerPopup) {
+    registerPopup.classList.add("hide");
+  }
+});
+</script>
+
+<script>
+function registerProses() {
+  const user = document.getElementById("regUser").value;
+  const pass = document.getElementById("regPass").value;
+  const confirm = document.getElementById("regConfirm").value;
+
+  if (!user || !pass) {
+    alert("Username dan password wajib diisi!");
+    return;
+  }
+
+  if (pass !== confirm) {
+    alert("Password tidak sama!");
+    return;
+  }
+
+  localStorage.setItem("username", user);
+  localStorage.setItem("password", pass);
+
+  alert("Register berhasil! Silakan login.");
+
+  registerPopup.classList.add("hide");
+  loginPopup.classList.remove("hide");
+}
+</script>
+
+
+
+    
+
 
     <!-- Contact Us-->
      <section class="contact" id="contact">
@@ -727,3 +898,4 @@
     
     </body>
     </html>
+
