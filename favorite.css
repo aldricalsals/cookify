@@ -2,9 +2,12 @@
     background: #2b2926;
     color: white;
     height: 56px;
+    padding: 0 16px;
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: left;
 }
 .back-btn{
     display: flex;
@@ -18,10 +21,6 @@
     display: block;
 }
 .fav-title{
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 18px;
     font-weight: 600;
 }
