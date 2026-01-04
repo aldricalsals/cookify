@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="fav-btn.css">
-<title>Favorite</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fav-btn.css">
+    <title>Favorite</title>
 
 </head>
 
 <body>
-
 <nav class="fav-nav">
     <a href="index.html" class="back-btn">
         <img src="arrow-big-left.png" alt="Back">
@@ -25,46 +24,46 @@
 </div>
 
 <script>
-const grid = document.getElementById("favoriteGrid");
-const emptyText = document.getElementById("emptyText");
+    const grid = document.getElementById("favoriteGrid");
+    const emptyText = document.getElementById("emptyText");
 
-let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-function renderFavorite() {
-    grid.innerHTML = "";
+    function renderFavorite() {
+        grid.innerHTML = "";
 
-    if (favorites.length === 0) {
-        emptyText.style.display = "block";
-        return;
+        if (favorites.length === 0) {
+            emptyText.style.display = "block";
+            return;
+        }
+
+        emptyText.style.display = "none";
+
+        favorites.forEach((item, index) => {
+            const card = document.createElement("div");
+            card.className = "favorite-card";
+
+            card.innerHTML = `
+                <span class="remove-favorite" onclick="removeFavorite(${index})">❤️</span>
+                <img src="${item.img}">
+                <div class="favorite-content">
+                    <h4>${item.title}</h4>
+                    <p>${item.desc}</p>
+                </div>
+            `;
+
+            grid.appendChild(card);
+        });
     }
 
-    emptyText.style.display = "none";
+    function removeFavorite(index) {
+        favorites.splice(index, 1);
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        renderFavorite();
+    }
 
-    favorites.forEach((item, index) => {
-        const card = document.createElement("div");
-        card.className = "favorite-card";
-
-        card.innerHTML = `
-            <span class="remove-favorite" onclick="removeFavorite(${index})">❤️</span>
-            <img src="${item.img}">
-            <div class="favorite-content">
-                <h4>${item.title}</h4>
-                <p>${item.desc}</p>
-            </div>
-        `;
-
-        grid.appendChild(card);
-    });
-}
-
-function removeFavorite(index) {
-    favorites.splice(index, 1);
-    localStorage.setItem("favorites", JSON.stringify(favorites));
     renderFavorite();
-}
-
-renderFavorite();
-</script>
+    </script>
 
 </body>
 </html>
