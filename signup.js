@@ -7,7 +7,7 @@ function registerUser(nama, email, password){
     const user = {
         nama: nama,
         email: email,
-        password: btoa(password)
+        password: hashPassword(password)
     };
     localStorage.setItem("user", JSON.stringify(user));
 }
@@ -27,3 +27,16 @@ function logout(){
     window.location.href = "login.html";
 
 }
+
+/*Lupa PW*/
+function forgotPassword(email) {
+    const storedData = localStorage.getItem("user");
+    if (!storedData) return null;
+
+    const user = JSON.parse(storedData);
+    if (user.email === email) {
+        return atob(user.password); 
+    }
+    return null;
+}
+
