@@ -790,7 +790,80 @@ function registerProses() {
 
 
 
+    <!-- LOGIN POPUP -->
+        <!-- AUTH POPUP -->
+            <div class="login-overlay hide" id="loginPopup">
+    <div class="login-container">
+        <span class="close-login" id="closeLogin">✕</span>
 
+        <div class="line"></div>
+        <h1>User Login</h1>
+
+        <div class="input-box">
+        <img src="user.png" class="icon">
+        <input type="text" id="loginUser" placeholder="username">
+        </div>
+
+        <div class="input-box">
+        <img src="lock.png" class="icon">
+        <input type="password" id="loginPass" placeholder="password">
+        </div>
+
+        <a href="#" class="forgot">Forgot Password?</a>
+
+        <button onclick="loginProses()">Login</button>
+
+        <p style="margin-top:15px; font-size:14px;">
+        Belum punya akun?
+        <a href="register.html" style="color:#2f7a3d; font-weight:500;">
+            Register
+        </a>
+        </p>
+
+        <div class="line"></div>
+    </div>
+    </div>
+
+    <script>
+        const loginPopup = document.getElementById("loginPopup");
+        const openLogin = document.getElementById("openLogin");
+        const closeLogin = document.getElementById("closeLogin");
+
+        /* buka popup */
+        openLogin.addEventListener("click", e => {
+        e.preventDefault();
+        loginPopup.classList.remove("hide");
+        });
+
+        /* tutup popup */
+        closeLogin.addEventListener("click", () => {
+        loginPopup.classList.add("hide");
+        });
+
+        /* klik area gelap = tutup */
+        loginPopup.addEventListener("click", e => {
+        if (e.target === loginPopup) {
+            loginPopup.classList.add("hide");
+        }
+        });
+    </script>
+
+    <script>
+        function loginProses() {
+        const userIn = document.getElementById("loginUser").value;
+        const passIn = document.getElementById("loginPass").value;
+
+        const storedUser = localStorage.getItem("username");
+        const storedPass = localStorage.getItem("password");
+
+        if (userIn === storedUser && passIn === storedPass) {
+            alert("Login berhasil!");
+            loginPopup.classList.add("hide");
+        } else {
+            alert("Username atau password salah!");
+        }
+        }
+        </script>
                 
     <footer>
         Copyright &copy: Cookify - 2025
